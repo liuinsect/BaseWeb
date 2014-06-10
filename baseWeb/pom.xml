@@ -14,7 +14,8 @@
         <module>client</module>
         <module>service</module>
         <module>web</module>
-    </modules>
+    <module>dao</module>
+  </modules>
 
     <properties>
 
