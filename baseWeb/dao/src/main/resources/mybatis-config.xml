@@ -5,23 +5,11 @@
 
 <configuration>
 	<typeAliases>
-  		<typeAlias alias="User" type="com.liusoft.baseWeb.User" />
-  		<!--<typeAlias alias="AbTest" type="com.jd.gemini.abTest.AbTest" />-->
-  		<!--<typeAlias alias="User" type="com.jd.gemini.User"/>-->
-  		<!--<typeAlias alias="Notice" type="com.jd.gemini.Notice"/>-->
-  		<!--<typeAlias alias="Data" type="com.jd.gemini.Data"/>-->
-  		<!--<typeAlias alias="Product" type="com.jd.gemini.product.Product"/>-->
-  		<!--<typeAlias alias="TaskResult" type="com.jd.gemini.system.TaskResult"/>-->
-  		<!--<typeAlias alias="TaskLock" type="com.jd.gemini.system.TaskLock"/>-->
-  	  	<!--<typeAlias alias="Count" type="com.jd.gemini.Count"/>-->
-  	  	<!--<typeAlias alias="ProductTop" type="com.jd.gemini.ProductTop"/>		-->
-  		<!--<typeAlias alias="UserTop" type="com.jd.gemini.UserTop"/>	-->
-  		<!--<typeAlias alias="AbtestEmail" type="com.jd.gemini.AbtestEmail"/>	-->
-  		<!--<typeAlias alias="TestLog" type="com.jd.gemini.log.GeminiTestLog"/>	-->
+        <typeAlias alias="LoginUser" type="com.liusoft.userprivilege.LoginUser" />
   	</typeAliases>
   	
   	<mappers>
-		<mapper resource="mappers/user.xml" />
+		<mapper resource="mappers/loginUser.xml" />
 
 	</mappers>
 </configuration>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper 
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="LoginUser">
+
+	<resultMap type="LoginUser" id="userMap">
+		<result property="userId" column="userId" />
+		<result property="password" column="password" />
+		<result property="status" column="status" />
+		<result property="account" column="account" />
+		<result property="userName" column="userName" />
+		<result property="picture" column="picture" />
+		<result property="phone" column="phone" />
+		<result property="address" column="address" />
+		<result property="email" column="email" />
+		<result property="descriptions" column="descriptions" />
+	</resultMap>
+
+	<sql id="sel_field">userId,password,status,account,userName,picture,phone,address,email,descriptions
+	</sql>
+
+	<!--<select id="getUserErp" resultMap="userMap" parameterType="java.util.HashMap">-->
+		<!--SELECT-->
+		<!--<include refid="sel_field" />-->
+		<!--FROM base_user_info-->
+		<!--where-->
+		<!--erp_account = #{erpAccount}-->
+	<!--</select>-->
+
+
+	<select id="getUserById" resultMap="userMap" parameterType="java.util.HashMap">
+		SELECT
+		<include refid="sel_field" />
+		FROM baseweb_login_user
+		where
+        userId = #{id}
+	</select>
+
+	<!--<select id="count" resultType="java.lang.Integer" parameterType="java.util.HashMap">-->
+
+		<!--SELECT COUNT(id) FROM base_user_info-->
+		<!--<if test="keyword!=null">-->
+			 <!--where  erp_account like CONCAT('%','${keyword}','%' )-->
+         <!--</if>-->
+
+	<!--</select>-->
+
+	<!--<select id="getUser" resultMap="userMap" parameterType="java.util.HashMap">-->
+		<!--SELECT-->
+		<!--<include refid="sel_field" />-->
+		<!--FROM base_user_info-->
+		<!--<if test="keyword!=null">-->
+			 <!--where  erp_account like CONCAT('%','${keyword}','%' )-->
+        <!--</if>-->
+		<!--order by gmt_modify desc-->
+		<!--limit #{startIndex},#{pageSize}-->
+	<!--</select>-->
+
+
+	<!--<update id="upDateUser" parameterType="com.liusoft.User">-->
+		<!--update base_user_info-->
+		<!--<set>-->
+			<!--<if test="userName!=null">-->
+				<!--user_name= #{userName},-->
+			<!--</if>-->
+			<!--<if test="mobile!=null">-->
+				<!--mobile= #{mobile},-->
+			<!--</if>-->
+			<!--<if test="email!=null">-->
+				<!--email= #{email},-->
+			<!--</if>-->
+			<!--<if test="id!= null">-->
+				<!--gmt_modify = now()-->
+			<!--</if>-->
+		<!--</set>-->
+		<!--where id=#{id}-->
+
+	<!--</update>-->
+
+	<!--<update id="changUserStat" parameterType="java.util.HashMap">-->
+		<!--update base_user_info-->
+		<!--set is_del=#{isDel}, gmt_modify = now()-->
+		<!--where id=#{id}-->
+    <!--</update>-->
+
+	<!--<update id="upDateUserLoginTime" parameterType="java.lang.String">-->
+		<!--update-->
+		<!--base_user_info-->
+		<!--set last_login= now()-->
+		<!--where erp_account = #{value}-->
+    <!--</update>-->
+
+	<!--<insert id="addUser" parameterType="java.util.HashMap">-->
+		<!--INSERT `base_user_info` (-->
+		<!--erp_account,-->
+		<!--user_name,-->
+		<!--mobile,-->
+		<!--email,-->
+		<!--test_count,-->
+		<!--gmt_create,-->
+		<!--gmt_modify,-->
+		<!--is_del)-->
+		<!--VALUES-->
+		<!--(-->
+		<!--#{erpAccount},-->
+		<!--#{userName},-->
+		<!--#{mobile},-->
+		<!--#{email},-->
+		<!--#{testCount},-->
+		<!--#{gmtCreate},-->
+		<!--#{gmtModify},-->
+		<!--0)-->
+    <!--</insert>-->
+
+	<!--<update id="addCount" parameterType="java.lang.String">-->
+		<!--update base_user_info-->
+		<!--set-->
+		<!--test_count = test_count + 1-->
+		<!--where erp_account=#{value}-->
+    <!--</update>-->
+</mapper> 

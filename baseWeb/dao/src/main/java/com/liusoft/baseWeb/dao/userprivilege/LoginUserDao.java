@@ -1,47 +1,32 @@
-//package com.jd.gemini.dao.user;
-//
-//import java.util.List;
-//import java.util.Map;
-//
-//import org.mybatis.spring.support.SqlSessionDaoSupport;
-//import org.springframework.stereotype.Component;
-//
-//
-//
-//public class UserDao extends SqlSessionDaoSupport
-//{
-//
-//	/**
-//	 * 通过erp获取用户信息
-//	 * @return  String erpAccount
-//	 */
-//	public User  getUserByErp(Map<String,Object> query){
-//		return this.getSqlSession().selectOne("User.getUserErp",query);
-//	}
-//
-//	/**
-//	 * 通过id获取用户信息
-//	 * @return  String id
-//	 */
-//	public User  getUserById(Map<String,Object> query){
-//		return this.getSqlSession().selectOne("User.getUserById",query);
-//	}
-//
-//	/**
-//	 * 计数
-//	 * @return  String erpAccount
-//	 */
-//	public Integer  count(Map<String,Object> query){
-//		return this.getSqlSession().selectOne("User.count",query);
-//	}
-//
+package com.liusoft.baseWeb.dao.userprivilege;
+
+import com.liusoft.userprivilege.LoginUser;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+
+import java.util.Map;
+
+
+public class LoginUserDao extends SqlSessionDaoSupport
+{
+
+
+	/**
+	 * 通过id获取用户信息
+	 * @return  String id
+	 */
+	public LoginUser getUserById(Long userId){
+
+        return this.getSqlSession().selectOne("LoginUser.getUserById",userId);
+	}
+
+
 //
 //
 //	/**
 //	 * 获得所有用户列表
 //	 * @return
 //	 */
-//	public List<User> getUser(Map<String,Object> query){
+//	public List<LoginUser> getUser(Map<String,Object> query){
 //		return this.getSqlSession().selectList("User.getUser",query);
 //	}
 //
@@ -80,4 +65,4 @@
 //	public void addUserTestCount(String erp){
 //		this.getSqlSession().update("User.addCount", erp);
 //	}
-//}
+}
