@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                     http://www.springframework.org/schema/beans/spring-beans.xsd
+                    "
+       default-autowire="byName">
+
+
+    <bean id="targetDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close">
+        <property name="driverClass">
+            <value>${jdbc.driver}</value>
+        </property>
+        <property name="jdbcUrl">
+            <value>${jdbc.url}</value>
+        </property>
+        <property name="user">
+            <value>${jdbc.username}</value>
+        </property>
+        <property name="password">
+            <value>${jdbc.password}</value>
+        </property>
+        <property name="initialPoolSize">
+            <value type="java.lang.Integer">${initialPoolSize}</value>
+        </property>
+        <property name="minPoolSize">
+            <value type="java.lang.Integer">${minPoolSize}</value>
+        </property>
+        <property name="maxPoolSize">
+            <value type="java.lang.Integer">${maxPoolSize}</value>
+        </property>
+        <property name="acquireIncrement">
+            <value>${acquireIncrement}</value>
+        </property>
+        <property name="acquireRetryAttempts">
+            <value>${acquireRetryAttempts}</value>
+        </property>
+        <property name="maxIdleTime">
+            <value>${maxIdleTime}</value>
+        </property>
+    </bean>
+
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy">
+        <property name="targetDataSource" ref="targetDataSource"/>
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="springTransactionTemplate" class="com.liusoft.baseWeb.common.transaction.SpringTransactionTemplate"/>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+    </bean>
+
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+</beans>

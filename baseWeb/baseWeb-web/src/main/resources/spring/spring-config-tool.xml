@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd"
+	default-autowire="byName">
+
+	<!-- 可以使用如下的方式声明Properties类型的FactoryBean来加载配置文件，这种方式就只能当做Properties属性注入，而不能获其中具体的值 -->
+	<bean id="propertiesFactoryBean"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath:baseWeb-production.properties</value>
+				<value>classpath:important.properties</value>
+			</list>
+		</property>
+	</bean>
+
+
+
+</beans>
+
+
