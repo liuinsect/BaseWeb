@@ -3,19 +3,19 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.liusoft.baseWeb</groupId>
-  <artifactId>web</artifactId>
+  <artifactId>base</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
-  <name>web</name>
+  <name>base</name>
   <url>http://maven.apache.org</url>
 
     <modules>
-        <module>client</module>
-		 <module>dao</module>
-        <module>service</module>
-        <module>web</module>
-   
+        <module>baseWeb-client</module>
+		 <module>baseWeb-dao</module>
+        <module>baseWeb-service</module>
+        <module>baseWeb-web</module>
+    <module>baseWeb-common</module>
   </modules>
 
     <properties>
@@ -199,6 +199,13 @@
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>${servlet.version}</version>
+                <scope>provided</scope>
             </dependency>
 
         </dependencies>
