@@ -1,0 +1,26 @@
+<!-- 该页面无需有head、body等标签，根据本身规则，meta、link、script标签自动会集成到主页面的head标签里面 -->
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+
+
+
+<link rel="icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon"> 
+<link rel="shortcut icon" href="favicon.ico" mce_href="favicon.ico" type="image/x-icon">
+		
+<link rel="stylesheet" type="text/css" href="/misc/module/jquery-easyui-core/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="/misc/module/jquery-easyui-core/themes/icon.css">
+<link rel="stylesheet" type="text/css" href="/misc/css/styles.css">
+<link rel="stylesheet" type="text/css" href="/misc/images/icon.css">
+
+<!-- 系统 -->
+<script type="text/javascript" src="/misc/module/jquery-easyui-core/jquery-1.4.4.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/misc/module/jquery-easyui-core/jquery.easyui.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/misc/module/jquery-easyui-core/locale/easyui-lang-zh_CN.js" charset="utf-8"></script>
+<script type="text/javascript" src="/misc/js/json2.js"></script>
+<script type="text/javascript" src="/misc/js/public.js"></script>
+<script type="text/javascript" src="/misc/js/jquery.imagePreview.js"></script>
+<script type="text/javascript" src="/misc/js/jquery.tableDeal.js"></script>
+<script type="text/javascript" src="/misc/js/init.js"></script>

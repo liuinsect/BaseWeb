@@ -12,10 +12,10 @@
 
     <modules>
         <module>baseWeb-client</module>
-		 <module>baseWeb-dao</module>
+		<module>baseWeb-dao</module>
         <module>baseWeb-service</module>
         <module>baseWeb-web</module>
-    <module>baseWeb-common</module>
+        <module>baseWeb-common</module>
   </modules>
 
     <properties>

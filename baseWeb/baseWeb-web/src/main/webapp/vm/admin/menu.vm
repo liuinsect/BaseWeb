@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>山区道路结构与材料重庆市市级重点实验室后台系统登录</title>
+        #include('/admin/common.vm')
+	</head>
+
+	<body class="easyui-layout">
+		<!--body的north，显示logo -->
+		<div region='north'
+			style="height: 60px; background: #EBF3FD; background-image: url('/misc/images/header.jpg'); background-repeat: no-repeat; background-position: left;">
+		</div>
+		<!-- 结束 -->
+
+		<!-- body的west，显示导航栏 -->
+		<div region="west" split="true" title="操作菜单"
+			style="width: 237px; padding-right: 0px; overflow: hidden">
+			<div fit="true" class="easyui-accordion"
+				style="float: left; padding: 1px; padding-right: 0px; border-right: none;">
+				<div title="信息管理" icon="icon-add" selected="true"
+					style="overflow: auto;">
+					<ul class="navigator-tree" state='closed'>
+						<li>
+							<span><font size="2">内容更新</font> </span>
+							<ul>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="main.html">工作动态</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=ggtz&&divTitle='公告通知'">公告通知</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=xsdwpy&&divTitle='学术队伍培养'">学术队伍培养</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=yjspy&&divTitle=研究生培养">研究生培养</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=yjfx&&divTitle=研究方向">研究方向</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=xsgg&&divTitle=学术骨干">学术骨干</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=kyxm&&divTitle=科研项目">科研项目</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=hjxm&&divTitle=获奖项目及发明专利">获奖项目及发明专利</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=dbxlw&&divTitle=代表性论文和专著">代表性论文和专著</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=yqjs&&divTitle=大型精密贵重仪器介绍">大型精密贵重仪器介绍</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=kfjj&&divTitle=开放基金">开放基金</a> </span>
+								</li>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="contentUpdate/netBarDesc.jsp?module=xsjl&&divTitle=学术交流">学术交流</a> </span>
+								</li>
+								
+							</ul>
+						</li>
+						<li>
+						<span><font size="2">文件上传</font> </span>
+							<ul>
+								<li>
+									<span><a href="javascript:void(0)"
+										class="basicInformationCollection" finalClass="NetBarDesc"
+										url="filesUpload/filesUploadMain.jsp">开放基金</a> </span>
+								</li>
+							
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div title="辅助功能" icon="icon-add" selected="false"
+					style="overflow: auto; width: 100%">
+					<ul class="navigator-tree" id='leftChoice'>
+						<li>
+							<span>用户管理</span>
+							<ul>
+								<li>
+									<span><a href="javascript:void(0)"
+									class="basicInformationCollection" finalClass="NetBarDesc"
+										url="userManager/userMain.jsp">修改密码</a> </span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		<!-- 结束 -->
+
+		<!-- body的center，显示主操作界面 -->
+		<div region="center" id="main"
+			style="overflow: hidden; padding: 0px; background-color: #EBF3FD; border: 0px">
+			<div fit="true" title="主界面" id="background_panel">
+				欢迎使用山区道路建设与维护技术重庆市重点实验室后台管理系统
+			</div>
+		</div>
+		<!-- 结束 -->
+
+		<div region="south" split='true'
+			style="height: 20px; background-color: #A4BED4; overflow: hidden;">
+			<div align="center">
+				版权所有：&nbsp; 重庆邮电大学&nbsp;&nbsp;&nbsp; 重庆邮电大学授权文化执法大队使用
+			</div>
+		</div>
+
+	</body>
+</html>

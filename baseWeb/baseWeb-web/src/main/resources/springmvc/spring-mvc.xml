@@ -59,6 +59,8 @@
         </property>
     </bean>
 
+
+    <mvc:resources mapping="/misc/**" location="/misc/"	cache-period="31556927" />
 </beans>
 
 

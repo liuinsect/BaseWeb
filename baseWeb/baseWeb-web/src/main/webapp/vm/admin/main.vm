@@ -1,0 +1,45 @@
+
+<script type="text/javascript" 	src="/misc/js/contentMainPage.js" charset="utf-8"></script>
+
+<div fit="true" title="$divTitle" style="border: 0px"
+     id="basicInformationCollection_NetBarDesc_panel">
+
+    <!-- 一个包含north/center布局的主界面 -->
+    <div class="easyui-layout" fit="true"
+         style="overflow: hidden; background-color: #EBF3FD">
+        <!-- center的north，显示查询界面（第二层div，高度固定）-->
+        <div region='north' style="height: 65px; background-color: #EBF3FD; overflow: hidden; border: 0px">
+            <!-- 查询界面独立出来 -->
+            #include("/admin/commonOfQuery.vm");
+        </div>
+
+        <div region='center' style="overflow: auto; border: 0px">
+            <table name="companyList">
+            </table>
+        </div>
+    </div>
+
+
+
+    <!-- 对话框 -->
+    <div name='companyDialog'
+         style="padding: 2px; width: 950px; height: 600px; display: none;">
+        <form  name='companyDesc'
+               method="post" enctype="multipart/form-data">
+            <!-- 对话框包含一个form -->
+            <input type="hidden" name='finalClass' value="Article" />
+            <input type="hidden" name='leaderPicFlag' />
+            <div class="easyui-tabs" style="height: 500px;">
+                <div title="请填写相关内容" style="padding: 2px;">
+                    <!-- form又包含一个tabs布局 -->
+                    <iframe name="myFrame" id="myFrame" src="/kindeditor/index.html"
+                            height="95%" width="100%" marginwidth="0" framespacing="0" marginheight="0" frameborder="0" scrolling="no">
+                        <p>Your browser does not support iframes.</p>
+                    </iframe>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- 结束 -->
+</div>
+

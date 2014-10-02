@@ -129,6 +129,15 @@
 
     <!-- 打包配置文件 -->
 
-
-
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <log.root>E:/logs/baseweb</log.root>
+            </properties>
+        </profile>
+    </profiles>
 </project>
