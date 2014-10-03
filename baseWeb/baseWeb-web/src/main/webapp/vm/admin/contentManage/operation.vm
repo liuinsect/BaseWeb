@@ -28,6 +28,17 @@
 				<td>
 					<table width="100%"">
 						<tr>
+                            <td>
+                                文章所属模块
+                            </td>
+                            <td>
+                                <select id="moduleId" style="width: 110px">
+                                    #foreach($module in $moduleList)
+                                        <option value="$module.id" >$module.module</option>
+                                    #end
+                                </select>
+                            </td>
+
 							<td>
 								文章标题
 							</td>

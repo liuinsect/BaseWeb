@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
-  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
-  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-	<typeAliases>
-        <typeAlias alias="LoginUser" type="com.liusoft.userprivilege.LoginUser" />
-  	</typeAliases>
-  	
-  	<mappers>
-		<mapper resource="mappers/loginUser.xml" />
+    <typeAliases>
+        <typeAlias alias="User" type="com.liusoft.baseWeb.client.user.User" />
+        <typeAlias alias="Module" type="com.liusoft.baseWeb.client.module.Module" />
+        <typeAlias alias="Article" type="com.liusoft.baseWeb.client.article.Article" />
+        <typeAlias alias="Role" type="com.liusoft.baseWeb.client.role.Role" />
+        <typeAlias alias="PrivilegeOfRole" type="com.liusoft.baseWeb.client.privilegeofrole.PrivilegeOfRole" />
+    </typeAliases>
 
-	</mappers>
+    <mappers>
+        <mapper resource="mappers/user.xml" />
+        <mapper resource="mappers/Module.xml" />
+        <mapper resource="mappers/Article.xml" />
+        <mapper resource="mappers/PrivilegeOfRole.xml" />
+        <mapper resource="mappers/Role.xml" />
+
+
+    </mappers>
 </configuration>

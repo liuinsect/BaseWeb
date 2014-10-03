@@ -1,15 +1,7 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%
-	String path = request.getContextPath();
-	String basePath = request.getScheme() + "://"
-			+ request.getServerName() + ":" + request.getServerPort()
-			+ path + "/";
-%>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 	<head>
-		<base href="<%=basePath%>">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 		<title>欢迎使用山区道路建设与维护技术重庆市重点实验室后台管理系统</title>
 
@@ -56,6 +48,13 @@
 					<input name="password" type="password" class="easyui-validatebox"
 						required="true" style="width: 132px;">
 				</p>
+
+                <p>
+                    账户类型：
+                    <select name="role" >
+                            <option value=""
+                    </select>
+                </p>
 				<div
 					style="padding: 1px; text-align: center; border-color: yellow; border-width: 2px">
 					<a href="javascript:void(0)" class="easyui-linkbutton" plain="true"

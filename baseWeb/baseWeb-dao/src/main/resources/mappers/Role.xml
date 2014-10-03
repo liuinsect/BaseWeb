@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN "
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Role">
+	<resultMap id="roleMap" type="Role">
+	<result property="id" column="id" />
+		<result property="roleName" column="role_name" />
+	</resultMap>
+
+	<sql id="fields">
+		t_role.id,t_role.role_name
+	</sql>
+	
+	<sql id="common-sql">	
+		<trim prefix="where" prefixOverrides="and | or" suffixOverrides=",">
+			<if test="roleName != null">and role_name = #{field.propertyName}</if>
+		</trim>
+	</sql>
+	
+	<insert id="add" parameterType="Role">
+		INSERT INTO 
+		t_role(t_role.id,t_role.role_name)
+		VALUES(#{id},#{roleName})
+		<selectKey keyProperty="id" resultType="int">
+			select 
+			last_insert_id() as ID from t_role limit 1
+		</selectKey>
+	</insert>
+	
+	<update id="update" parameterType="Role">
+		UPDATE t_role
+		<trim prefix="set" suffixOverrides=",">
+				<if test="roleName != null">role_name = #{roleName},</if>
+		</trim>
+		WHERE id = #{id}
+	</update>
+	
+	<delete id="delete" parameterType="java.lang.Integer">
+		DELETE FROM t_role WHERE id = #{id}
+	</delete>
+	
+	<select id="getByExample" resultMap="roleMap" parameterType="Role">
+		SELECT <include refid="fields" /> FROM t_role  
+        <include refid="common-sql" />
+	</select>
+	
+	<select id="getById" resultMap="roleMap" parameterType="java.lang.Integer">
+		SELECT <include refid="fields" /> FROM t_role WHERE id = #{id}
+	</select>
+	
+	<select id="getByPage" resultMap="roleMap" parameterType="java.util.HashMap">
+		SELECT <include refid="fields" /> FROM t_role  
+        <include refid="common-sql" />
+		LIMIT #{startIndex},#{pageSize}
+	</select>
+
+    <select id="getAll" resultMap="roleMap" >
+        SELECT <include refid="fields" /> FROM t_role
+        <include refid="common-sql" />
+    </select>
+	
+	<select id="count" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+		SELECT COUNT(id) FROM t_role 
+        <include refid="common-sql" />
+	</select>
+</mapper>

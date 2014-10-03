@@ -35,18 +35,23 @@ function login() {
 	if ($.trim(account) == "" || $.trim(password) == "") {
 		return;
 	}
+
+    var roleId = $("#role").val();
 	var option = {
 		"account" : account,
-		"password" : password
+		"password" : password,
+        "roleId":roleId
 	};
-	$.post("privilegeAction!execute.action?timestamp=" + new Date().valueOf(), option,
+	$.post("doLogin.html?timestamp=" + new Date().valueOf(), option,
     function(json) {
-        if (json["message"] == 'success') {
+        if (json["success"]) {
             // 重定向
-            window.location.href = "main.jsp";
+            window.location.href = "/admin/index.html";
         } else {
             alert(json["message"]);
         }
 
     }, "json");
 }
+
+//{"success":true,"result":{},"message":null,"resultCode":null,"resultCodeParams":null,"model":null}

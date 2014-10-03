@@ -31,4 +31,22 @@ public class BaseWebProperties {
     public static void setPropertiesFactoryBean(Properties propertiesFactoryBean) {
         BaseWebProperties.propertiesFactoryBean = propertiesFactoryBean;
     }
+
+    public static  String getLoginCookieKey( ) {
+        return propertiesFactoryBean.get("login.cookie.key").toString().trim();
+    }
+
+
+    public static String getDomain() {
+        return propertiesFactoryBean.get("domain").toString().trim();
+    }
+
+
+    public static String getCookiePath() {
+        return propertiesFactoryBean.get("cookie.path").toString().trim();
+    }
+
+    public static int getCookieExpiry() {
+        return Integer.valueOf(propertiesFactoryBean.get("cookie.expiry").toString().trim());
+    }
 }

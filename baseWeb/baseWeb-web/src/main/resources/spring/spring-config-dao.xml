@@ -12,5 +12,16 @@
                      http://www.springframework.org/schema/context/spring-context.xsd"
 	default-autowire="byName">
 
+    <bean id="userDao" class="com.liusoft.baseWeb.dao.user.impl.UserDaoImpl"/>
+
+    <bean id="moduleDao" class="com.liusoft.baseWeb.dao.module.impl.ModuleDaoImpl"/>
+
+    <bean id="articleDao" class="com.liusoft.baseWeb.dao.article.impl.ArticleDaoImpl"/>
+
+    <bean id="privilegeOfRoleDao" class="com.liusoft.baseWeb.dao.privilegeofrole.impl.PrivilegeOfRoleDaoImpl"/>
+
+    <bean id="roleDao" class="com.liusoft.baseWeb.dao.role.impl.RoleDaoImpl"/>
+
+
 
 </beans>

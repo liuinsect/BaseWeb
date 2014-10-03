@@ -15,16 +15,16 @@ import javax.servlet.http.HttpServletRequest;
  * Time: 下午7:24
  * To change this template use File | Settings | File Templates.
  */
-@Controller
-@RequestMapping("/")
-public class IndexController extends BaseController {
-
-    /**
-     * 普通正常的配置
-     */
-    @RequestMapping(value="index.html",method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest request){
-        return view(INDEX);
-    }
-
-}
+//@Controller
+//@RequestMapping("/")
+//public class IndexController extends BaseController {
+//
+//    /**
+//     * 普通正常的配置
+//     */
+//    @RequestMapping(value="index.html",method = RequestMethod.GET)
+//    public ModelAndView index(HttpServletRequest request){
+//        return view(INDEX);
+//    }
+//
+//}

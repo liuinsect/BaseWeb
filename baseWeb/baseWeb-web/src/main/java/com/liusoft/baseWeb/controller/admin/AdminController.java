@@ -25,25 +25,9 @@ public class AdminController extends BaseController {
      * 普通正常的配置
      */
     @RequestMapping(value="index.html",method = RequestMethod.GET)
-    public ModelAndView index(HttpServletRequest request){
+    public ModelAndView menu(HttpServletRequest request){
         return view(ADMIN+"index");
     }
 
-
-    /**
-     * 普通正常的配置
-     */
-    @RequestMapping(value="menu.html",method = RequestMethod.GET)
-    public ModelAndView menu(HttpServletRequest request){
-        return view(ADMIN+"menu");
-    }
-
-    /**
-     * 普通正常的配置
-     */
-    @RequestMapping(value="main.html")
-    public ModelAndView main(HttpServletRequest request){
-        return view(ADMIN+"main");
-    }
 
 }

@@ -18,14 +18,21 @@
     <context:annotation-config/>
     <mvc:annotation-driven/>
 
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/topic.html"/>-->
-            <!--<bean id="springMvcInterceptor" class="com.liusoft.xxx">-->
-                <!--<property name="aaaa" value="${aaaaaa}"/>-->
-            <!--</bean>-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <!-- 总拦截器，restful方式的服务接口单独走 handler mapping -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <!-- 除了login.html其他全部走登录拦截器 -->
+            <mvc:mapping path="/admin/*.html"/>
+            <bean class="com.liusoft.baseWeb.interceptor.LoginInterceptor">
+                <property name="excludedUrls">
+                    <list>
+                        <value>/admin/login.html</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:interceptor>
+
+    </mvc:interceptors>
 
 
     <!-- 总错误处理-->
@@ -60,7 +67,7 @@
     </bean>
 
 
-    <mvc:resources mapping="/misc/**" location="/misc/"	cache-period="31556927" />
+    <mvc:resources mapping="/misc/**" location="/misc/" cache-period="31556927"/>
 </beans>
 
 

@@ -13,4 +13,16 @@
        default-autowire="byName">
 
 
+    <bean id="userService" class="com.liusoft.baseWeb.service.user.impl.UserServiceImpl"/>
+
+    <bean id="roleService" class="com.liusoft.baseWeb.service.role.impl.RoleServiceImpl"/>
+
+    <bean id="articleService" class="com.liusoft.baseWeb.service.article.impl.ArticleServiceImpl"/>
+
+    <bean id="moduleService" class="com.liusoft.baseWeb.service.module.impl.ModuleServiceImpl"/>
+
+    <bean id="privilegeOfRoleService" class="com.liusoft.baseWeb.service.privilegeofrole.impl.PrivilegeOfRoleServiceImpl"/>
+
+
+
 </beans>

@@ -1,11 +1,21 @@
 package com.liusoft.baseWeb.common.util;
 
+import com.liusoft.baseWeb.client.user.User;
 import com.liusoft.baseWeb.client.util.StringUtils;
+import com.liusoft.baseWeb.common.BaseWebProperties;
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.util.HashMap;
+import java.util.Map;
+
+import sun.misc.BASE64Decoder;
+import sun.misc.BASE64Encoder;
 
 /**
  * Created with IntelliJ IDEA.
@@ -58,5 +68,43 @@ public class CookieUtils {
     }
 
 
+    public static void setCookie(HttpServletResponse servletResponse, String name, String value) {
+        Cookie cookie = new Cookie(name, value);
+        cookie.setDomain(BaseWebProperties.getDomain());
+        cookie.setPath(BaseWebProperties.getCookiePath() );
+        cookie.setMaxAge(BaseWebProperties.getCookieExpiry());
+        servletResponse.addCookie(cookie);
+    }
+
+    public static void produceLoginCookie(HttpServletResponse response,User user){
+        String loginCookieKey = BaseWebProperties.getLoginCookieKey();
+        Map map = new HashMap();
+        map.put("userId",user.getUserId());
+        map.put("ps",user.getPassword());
+        //TODO 差时间戳
+        BASE64Encoder base64=new BASE64Encoder();
+        String cookieValue = base64.encode(JsonUtils.toJson(map).getBytes());
+
+        CookieUtils.setCookie(response, loginCookieKey, cookieValue);
+    }
+
+    public static Map validateLoginCookie(HttpServletRequest request){
+        String loginCookie = getCookieValue( request, BaseWebProperties.getLoginCookieKey() );
+        if( StringUtils.isBlank(loginCookie) ){
+            return null;
+        }
+
+        BASE64Decoder base64Decoder=new BASE64Decoder();
+
+        byte[] cookieByte = new byte[0];
+        try {
+            cookieByte = base64Decoder.decodeBuffer(loginCookie);
+        } catch (IOException e) {
+            return null;
+        }
+
+        Map map = JsonUtils.readToMap( new String(cookieByte) );
+         return map;
+    }
 
 }

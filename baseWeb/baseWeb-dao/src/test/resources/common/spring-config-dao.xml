@@ -9,6 +9,8 @@
 	default-autowire="byName">
 
 
-	<bean id="userDao" class="com.liusoft.baseWeb.dao.userprivilege.LoginUserDao"/>
+	<bean id="roleDao" class="com.liusoft.baseWeb.dao.role.impl.RoleDaoImpl"/>
+
+    <bean id="userDao" class="com.liusoft.baseWeb.dao.user.impl.UserDaoImpl"/>
 
 </beans>

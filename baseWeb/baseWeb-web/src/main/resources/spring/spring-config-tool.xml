@@ -20,6 +20,10 @@
 	</bean>
 
 
+    <bean id="baseWebProperties" class="com.liusoft.baseWeb.common.BaseWebProperties" >
+        <constructor-arg index="0" ref="propertiesFactoryBean"/>
+    </bean>
+
 
 </beans>
 

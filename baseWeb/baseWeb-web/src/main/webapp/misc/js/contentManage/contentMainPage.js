@@ -95,6 +95,11 @@ $(document).ready(function() {
 					width : 50,
 					align : 'center'
 				}, {
+                    field : 'moduleName',
+                    title : '文章所属模块',
+                    width : 50,
+                    align : 'center'
+                }, {
 					field : 'createTime',
 					title : '文章发布时间',
 					width : 50,

@@ -1,7 +1,7 @@
 
-<script type="text/javascript" 	src="/misc/js/contentMainPage.js" charset="utf-8"></script>
+<script type="text/javascript" 	src="/misc/js/contentManage/contentMainPage.js" charset="utf-8"></script>
 
-<div fit="true" title="$divTitle" style="border: 0px"
+<div fit="true" title="内容列表" style="border: 0px"
      id="basicInformationCollection_NetBarDesc_panel">
 
     <!-- 一个包含north/center布局的主界面 -->
@@ -10,7 +10,7 @@
         <!-- center的north，显示查询界面（第二层div，高度固定）-->
         <div region='north' style="height: 65px; background-color: #EBF3FD; overflow: hidden; border: 0px">
             <!-- 查询界面独立出来 -->
-            #include("/admin/commonOfQuery.vm");
+            #include("/admin/contentManage/operation.vm");
         </div>
 
         <div region='center' style="overflow: auto; border: 0px">
