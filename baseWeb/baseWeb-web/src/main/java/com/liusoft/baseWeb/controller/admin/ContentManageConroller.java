@@ -1,11 +1,16 @@
 package com.liusoft.baseWeb.controller.admin;
 
+import com.liusoft.baseWeb.client.common.Result;
+import com.liusoft.baseWeb.client.module.Module;
 import com.liusoft.baseWeb.controller.common.BaseController;
+import com.liusoft.baseWeb.service.module.ModuleService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -20,12 +25,18 @@ public class ContentManageConroller extends BaseController{
 
     public static final String PREFIX = "admin/contentManage/";
 
+    @Resource
+    private ModuleService moduleService;
+
     /**
      * 普通正常的配置
      */
     @RequestMapping(value="main.html")
     public ModelAndView main(HttpServletRequest request){
-        return view(PREFIX +"main");
+
+        Result result =  moduleService.getAllModule();
+
+        return view(PREFIX +"main",result);
     }
 
 }

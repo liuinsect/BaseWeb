@@ -13,6 +13,7 @@ import java.util.List;
 import com.liusoft.baseWeb.client.common.PageQuery;
 import com.liusoft.baseWeb.client.common.Result;
 import com.liusoft.baseWeb.client.module.Module;
+import com.liusoft.baseWeb.dao.module.ModuleDao;
 import com.liusoft.baseWeb.service.module.ModuleService;
 import org.springframework.stereotype.Component;
 import org.apache.log4j.Logger;
@@ -28,7 +29,10 @@ import org.apache.log4j.Logger;
 public class ModuleServiceImpl implements ModuleService {
 
 	private static final Logger logger = Logger.getLogger(ModuleServiceImpl.class);
-	
+
+    @Resource
+    private ModuleDao moduleDao;
+
     public Result addModule(Module module) {
 		Result result = new Result();
 		
@@ -63,4 +67,13 @@ public class ModuleServiceImpl implements ModuleService {
 		
 		return result;
 	}
+
+    @Override
+    public Result getAllModule() {
+        Result result = new Result();
+        List<Module> modulelist = moduleDao.getAllModule();
+        result.addDefaultModel("modulelist",modulelist);
+        result.setSuccess(true);
+        return result;  //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

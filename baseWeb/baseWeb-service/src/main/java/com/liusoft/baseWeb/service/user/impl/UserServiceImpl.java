@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService {
 	
 	public User getUserById(Integer id) {
 		
-		return null;
+		return userDao.getUserById(id);
 	}
 	
 	public Result getUserByPage(PageQuery pageQuery) {

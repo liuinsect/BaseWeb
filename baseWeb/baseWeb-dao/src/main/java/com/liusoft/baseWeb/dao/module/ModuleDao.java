@@ -71,5 +71,6 @@ public interface ModuleDao {
      * @return
      */
     public int count(PageQuery pageQuery);
-	
+
+    public List<Module> getAllModule();
 }

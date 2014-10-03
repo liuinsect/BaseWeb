@@ -30,6 +30,8 @@ public class ModuleDaoImpl extends SqlSessionDaoSupport implements ModuleDao {
     private static final String GET_BY_ID = "Module.getById";
     private static final String GET_BY_PAGE = "Module.getByPage";
     private static final String COUNT = "Module.count";
+
+    private static final String GET_ALL = "Module.geAll";
     
     public Module addModule(Module module) {
     	this.getSqlSession().insert(ADD, module);
@@ -59,5 +61,10 @@ public class ModuleDaoImpl extends SqlSessionDaoSupport implements ModuleDao {
     public int count(PageQuery pageQuery) {
     	return ((Integer) this.getSqlSession().selectOne(COUNT, pageQuery.getParams())).intValue();
     }
-	
+
+    @Override
+    public List<Module> getAllModule() {
+        return this.getSqlSession().selectList(GET_ALL);
+    }
+
 }

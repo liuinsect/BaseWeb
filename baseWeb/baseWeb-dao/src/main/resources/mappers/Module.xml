@@ -57,6 +57,12 @@
         <include refid="common-sql" />
 		LIMIT #{startIndex},#{pageSize}
 	</select>
+
+    <select id="geAll" resultMap="moduleMap" >
+        SELECT <include refid="fields" /> FROM t_module
+    </select>
+
+
 	
 	<select id="count" resultType="java.lang.Integer" parameterType="java.util.HashMap">
 		SELECT COUNT(id) FROM t_module 

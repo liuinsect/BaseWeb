@@ -51,16 +51,16 @@ public class LoginInterceptor extends BaseInterceptor {
 
         Map map = CookieUtils.validateLoginCookie(request);
 
-        String userId = (String) map.get("userId");
+        Integer userId = (Integer) map.get("userId");
 
         String password = (String) map.get("ps");
 
-        if(StringUtils.isBlank(userId)){
+        if( userId == null || userId == 0 ){
             toLogin(request, response);
             return false;
         }
 
-        User user = userService.getUserById(Integer.valueOf(userId));
+        User user = userService.getUserById(userId);
 
         if( user == null ){
             toLogin(request, response);

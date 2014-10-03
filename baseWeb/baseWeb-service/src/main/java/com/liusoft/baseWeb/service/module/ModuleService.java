@@ -64,5 +64,7 @@ public interface ModuleService {
      * @return
      */
     public Result getModuleByPage(PageQuery pageQuery);
+
+    public Result getAllModule();
 	
 }
