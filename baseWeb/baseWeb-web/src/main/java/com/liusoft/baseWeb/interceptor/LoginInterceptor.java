@@ -2,6 +2,7 @@ package com.liusoft.baseWeb.interceptor;
 
 import com.liusoft.baseWeb.client.user.User;
 import com.liusoft.baseWeb.client.util.StringUtils;
+import com.liusoft.baseWeb.common.BaseWebProperties;
 import com.liusoft.baseWeb.common.util.CookieUtils;
 import com.liusoft.baseWeb.service.user.UserService;
 import org.apache.log4j.Logger;
@@ -50,6 +51,11 @@ public class LoginInterceptor extends BaseInterceptor {
 
 
         Map map = CookieUtils.validateLoginCookie(request);
+        if( map == null){
+            toLogin(request, response);
+            return false;
+        }
+
 
         Integer userId = (Integer) map.get("userId");
 
@@ -84,8 +90,9 @@ public class LoginInterceptor extends BaseInterceptor {
 	 */
 	private void toLogin(HttpServletRequest request , HttpServletResponse response) throws IOException{
         //否则直接redrect
-        response.sendRedirect("login.html");
-
+//        response.sendRedirect("/login.html");
+        response.sendRedirect(request.getContextPath()+"/login.html");
+//        response.sendRedirect( BaseWebProperties.getHomeURL()+"/login.html");
 	}
 
 }

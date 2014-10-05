@@ -3,6 +3,7 @@ package com.liusoft.baseWeb.controller.common;
 import com.liusoft.baseWeb.client.common.PageQuery;
 import com.liusoft.baseWeb.client.common.Result;
 import com.liusoft.baseWeb.client.constant.SystemConstant;
+import com.liusoft.baseWeb.client.user.User;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -56,7 +57,6 @@ public class BaseController {
 		PageQuery pageQuery = new PageQuery();
 
         //
-
         for (Iterator i = request.getParameterMap().entrySet().iterator(); i.hasNext(); ) {
             Map.Entry<String,String[]> e = (Map.Entry)i.next();
             String key = e.getKey();
@@ -81,7 +81,12 @@ public class BaseController {
 		}
 		return pageQuery;
 	}
-	
+
+    public User getLoginUser(HttpServletRequest request){
+        User user = (User) request.getAttribute("loginUser");
+        return user;
+    }
+
 	/**
 	 * 返回简单msg
 	 * @author liukunyang

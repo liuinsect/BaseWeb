@@ -26,8 +26,8 @@
 	
 	<insert id="add" parameterType="User">
 		INSERT INTO 
-		t_user(t_user.user_id,t_user.user_name,t_user.account,t_user.password,t_user.role_id)
-		VALUES(#{userId},#{userName},#{account},#{password},#{roleId})
+		t_user(t_user.user_name,t_user.account,t_user.password,t_user.role_id)
+		VALUES(#{userName},#{account},#{password},#{roleId})
 		<selectKey keyProperty="id" resultType="int">
 			select 
 			last_insert_id() as ID from t_user limit 1

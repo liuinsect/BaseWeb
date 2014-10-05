@@ -3,8 +3,9 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="Article">
-	<resultMap id="articleMap" type="Article">
-	<result property="id" column="id" />
+
+    <resultMap id="articleMap" type="Article">
+	    <result property="id" column="id" />
 		<result property="title" column="title" />
 		<result property="content" column="content" />
 		<result property="clickNum" column="click_num" />
@@ -13,24 +14,42 @@
 		<result property="moduleId" column="module_id" />
 	</resultMap>
 
+    <resultMap id="articleInfoMap" type="Article">
+        <result property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        <result property="clickNum" column="click_num" />
+        <result property="author" column="author" />
+        <result property="createTime" column="create_time" />
+        <result property="moduleId" column="module_id" />
+        <result property="moduleName" column="module_name" />
+    </resultMap>
+
+    <!--<resultMap id="moduleMap" type="Module">-->
+        <!--<result property="id" column="id" />-->
+        <!--<result property="name" column="name" />-->
+        <!--<result property="mark" column="mark" />-->
+    <!--</resultMap>-->
+
+
 	<sql id="fields">
 		t_article.id,t_article.title,t_article.content,t_article.click_num,t_article.author,t_article.create_time,t_article.module_id
 	</sql>
 	
 	<sql id="common-sql">	
 		<trim prefix="where" prefixOverrides="and | or" suffixOverrides=",">
-			<if test="title != null">and title = #{field.propertyName}</if>
-			<if test="content != null">and content = #{field.propertyName}</if>
-			<if test="clickNum != null">and click_num = #{field.propertyName}</if>
-			<if test="author != null">and author = #{field.propertyName}</if>
-				<if test="moduleId != null">and module_id = #{field.propertyName}</if>
+			<if test="title != null">and title = #{title}</if>
+			<if test="content != null">and content = #{content}</if>
+			<if test="clickNum != null">and click_num = #{clickNum}</if>
+			<if test="author != null">and author = #{author}</if>
+				<if test="moduleId != null">and module_id = #{moduleId}</if>
 		</trim>
 	</sql>
 	
 	<insert id="add" parameterType="Article">
 		INSERT INTO 
-		t_article(t_article.id,t_article.title,t_article.content,t_article.click_num,t_article.author,t_article.create_time,t_article.module_id)
-		VALUES(#{id},#{title},#{content},#{clickNum},#{author},#{createTime},#{moduleId})
+		t_article(t_article.title,t_article.content,t_article.click_num,t_article.author,t_article.create_time,t_article.module_id)
+		VALUES(#{title},#{content},#{clickNum},#{author},now(),#{moduleId})
 		<selectKey keyProperty="id" resultType="int">
 			select 
 			last_insert_id() as ID from t_article limit 1
@@ -63,9 +82,17 @@
 		SELECT <include refid="fields" /> FROM t_article WHERE id = #{id}
 	</select>
 	
-	<select id="getByPage" resultMap="articleMap" parameterType="java.util.HashMap">
-		SELECT <include refid="fields" /> FROM t_article  
-        <include refid="common-sql" />
+	<select id="getByPage" resultMap="articleInfoMap" parameterType="java.util.HashMap">
+		SELECT <include refid="fields" />,t_module.name as module_name FROM t_article,t_module
+        <trim prefix="where" prefixOverrides="and | or" suffixOverrides=",">
+            <if test="title != null">and title = #{title}</if>
+            <if test="content != null">and content = #{content}</if>
+            <if test="clickNum != null">and click_num = #{clickNum}</if>
+            <if test="author != null">and author = #{author}</if>
+            <if test="moduleId != null">and module_id = #{moduleId} </if>
+            and t_module.id=module_id
+        </trim>
+
 		LIMIT #{startIndex},#{pageSize}
 	</select>
 	
@@ -73,4 +100,9 @@
 		SELECT COUNT(id) FROM t_article 
         <include refid="common-sql" />
 	</select>
+
+    <!--<select id="getModuleById" resultMap="moduleMap" parameterType="java.lang.Integer">-->
+        <!--SELECT t_module.* FROM t_module WHERE t_module.id = #{id}-->
+    <!--</select>-->
+
 </mapper>

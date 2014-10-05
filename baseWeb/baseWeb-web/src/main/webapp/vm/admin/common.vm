@@ -24,3 +24,4 @@
 <script type="text/javascript" src="/misc/js/jquery.imagePreview.js"></script>
 <script type="text/javascript" src="/misc/js/jquery.tableDeal.js"></script>
 <script type="text/javascript" src="/misc/js/init.js"></script>
+<script type="text/javascript" src="/misc/js/baseWeb.utils.js"></script>

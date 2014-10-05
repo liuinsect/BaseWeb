@@ -51,7 +51,7 @@ public class ModuleServiceImpl implements ModuleService {
 		return result;
     }
 	
-	public List<Module> getListByExample(Module module) {
+	public Result getListByExample(Module module) {
 		
 		
 		return null;
@@ -64,7 +64,6 @@ public class ModuleServiceImpl implements ModuleService {
 	
 	public Result getModuleByPage(PageQuery pageQuery) {
 		Result result = new Result();
-		
 		return result;
 	}
 

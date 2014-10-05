@@ -47,7 +47,7 @@ public interface ModuleService {
      * @param  module
      * @return
      */
-    public List<Module> getListByExample(Module module);
+    public Result getListByExample(Module module);
     
 	/**
      * 根据主键获取Module
@@ -66,5 +66,5 @@ public interface ModuleService {
     public Result getModuleByPage(PageQuery pageQuery);
 
     public Result getAllModule();
-	
+
 }

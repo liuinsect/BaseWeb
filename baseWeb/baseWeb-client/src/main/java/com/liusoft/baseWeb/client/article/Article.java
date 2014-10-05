@@ -6,6 +6,7 @@ package com.liusoft.baseWeb.client.article;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.Date;
 
 /**
  * 
@@ -19,7 +20,7 @@ public class Article implements Serializable {
     /**
      * 
      */
-	private String id;
+	private int id;
 	
     /**
      * 
@@ -44,26 +45,32 @@ public class Article implements Serializable {
     /**
      * 
      */
-	private Timestamp createTime;
+	private Date createTime;
 	
     /**
      * 
      */
-	private String moduleId;
+	private int moduleId;
+
+
+    /**
+     *
+     */
+    private String moduleName;
 	
 	
 	public Article() {
 	}
-	
-	public String getId() {
-		return id;
-	}
-	
-	public void setId(String id) {
-		this.id = id;
-	}
-	
-	public String getTitle() {
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
 		return title;
 	}
 	
@@ -94,22 +101,43 @@ public class Article implements Serializable {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-	
-	public Timestamp getCreateTime() {
-		return createTime;
-	}
-	
-	public void setCreateTime(Timestamp createTime) {
-		this.createTime = createTime;
-	}
-	
-	public String getModuleId() {
-		return moduleId;
-	}
-	
-	public void setModuleId(String moduleId) {
-		this.moduleId = moduleId;
-	}
-	
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public int getModuleId() {
+        return moduleId;
+    }
+
+    public void setModuleId(int moduleId) {
+        this.moduleId = moduleId;
+    }
+
+    public String getModuleName() {
+        return moduleName;
+    }
+
+    public void setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+    }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "author='" + author + '\'' +
+                ", id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", clickNum=" + clickNum +
+                ", createTime=" + createTime +
+                ", moduleId=" + moduleId +
+                ", moduleName=" + moduleName +
+                '}';
+    }
 
 }

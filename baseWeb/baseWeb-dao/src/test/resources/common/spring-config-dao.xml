@@ -13,4 +13,7 @@
 
     <bean id="userDao" class="com.liusoft.baseWeb.dao.user.impl.UserDaoImpl"/>
 
+
+    <bean id="articleDao" class="com.liusoft.baseWeb.dao.article.impl.ArticleDaoImpl"/>
+
 </beans>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KindEditor JSP</title>
+    <link rel="stylesheet" href="/misc/module/kindeditor/themes/default/default.css" />
+    <link rel="stylesheet" href="/misc/module/kindeditor/plugins/code/prettify.css" />
+    <script charset="utf-8" src="/misc/module/kindeditor/kindeditor.js"></script>
+    <script charset="utf-8" src="/misc/module/kindeditor/lang/zh_CN.js"></script>
+    <script charset="utf-8" src="/misc/module/kindeditor/plugins/code/prettify.js"></script>
+    <script>
+        KindEditor.ready(function(K) {
+            var editor1 = K.create('textarea[name="content1"]', {
+                cssPath : '/misc/module/kindeditor/plugins/code/prettify.css',
+                uploadJson : '/kindeditor/upload_json.jsp',
+                fileManagerJson : '/kindeditor/file_manager_json.jsp',
+                allowFileManager : true,
+                afterCreate : function() {
+                    var self = this;
+                    K.ctrl(document, 13, function() {
+                        self.sync();
+                        document.forms['example'].submit();
+                    });
+                    K.ctrl(self.edit.doc, 13, function() {
+                        self.sync();
+                        document.forms['example'].submit();
+                    });
+                }
+            });
+            prettyPrint();
+        });
+
+
+    </script>
+</head>
+<body>
+<div align="center" style="height:100%">
+
+    <textarea id="content1" name="content1" cols="100" rows="10" style="width:95%;height:350px;visibility:hidden;">
+    ##				<%=htmlspecialchars(htmlData)%>
+
+    </textarea>
+    <textarea id="content" name="content" style="visibility:hidden;">
+    </textarea>
+
+</div>
+</body>
+</html>

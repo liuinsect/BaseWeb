@@ -55,6 +55,8 @@ public class ModuleDaoImpl extends SqlSessionDaoSupport implements ModuleDao {
     }
     
     public List<Module> getModuleByPage(PageQuery pageQuery) {
+        int total = this.count(pageQuery);
+        pageQuery.setTotalCount(total);
     	return this.getSqlSession().selectList(GET_BY_PAGE, pageQuery.getParams());
     }
     	

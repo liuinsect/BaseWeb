@@ -13,6 +13,7 @@ import java.util.List;
 import com.liusoft.baseWeb.client.article.Article;
 import com.liusoft.baseWeb.client.common.PageQuery;
 import com.liusoft.baseWeb.client.common.Result;
+import com.liusoft.baseWeb.dao.article.ArticleDao;
 import com.liusoft.baseWeb.service.article.ArticleService;
 import org.springframework.stereotype.Component;
 import org.apache.log4j.Logger;
@@ -25,15 +26,18 @@ import org.apache.log4j.Logger;
  * @date 2014-10-03 10:31:06
  *
  */
-@Component
 public class ArticleServiceImpl implements ArticleService {
 
 	private static final Logger logger = Logger.getLogger(ArticleServiceImpl.class);
-	
+
+    @Resource
+    private ArticleDao articleDao;
 
     public Result addArticle(Article article) {
 		Result result = new Result();
-		
+        article = articleDao.addArticle(article);
+        result.addDefaultModel("article",article);
+        result.setSuccess(true);
 		return result;
 	}
 	
@@ -62,7 +66,9 @@ public class ArticleServiceImpl implements ArticleService {
 	
 	public Result getArticleByPage(PageQuery pageQuery) {
 		Result result = new Result();
-		
+        List<Article> articleList = articleDao.getArticleByPage(pageQuery);
+        result.addDefaultModel("articleList",articleList);
+        result.setSuccess(true);
 		return result;
 	}
 }

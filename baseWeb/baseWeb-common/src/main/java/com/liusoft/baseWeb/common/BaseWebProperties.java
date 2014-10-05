@@ -49,4 +49,10 @@ public class BaseWebProperties {
     public static int getCookieExpiry() {
         return Integer.valueOf(propertiesFactoryBean.get("cookie.expiry").toString().trim());
     }
+
+    public static String getHomeURL() {
+        return propertiesFactoryBean.get("home.url").toString().trim();
+    }
+
+
 }

@@ -52,6 +52,8 @@ public class ArticleDaoImpl extends SqlSessionDaoSupport implements ArticleDao {
     }
     
     public List<Article> getArticleByPage(PageQuery pageQuery) {
+        int total = this.count(pageQuery);
+        pageQuery.setTotalCount(total);
     	return this.getSqlSession().selectList(GET_BY_PAGE, pageQuery.getParams());
     }
     	

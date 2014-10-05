@@ -22,7 +22,7 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <!-- 除了login.html其他全部走登录拦截器 -->
-            <mvc:mapping path="/admin/*.html"/>
+            <mvc:mapping path="/admin/**"/>
             <bean class="com.liusoft.baseWeb.interceptor.LoginInterceptor">
                 <property name="excludedUrls">
                     <list>
@@ -68,6 +68,8 @@
 
 
     <mvc:resources mapping="/misc/**" location="/misc/" cache-period="31556927"/>
+
+    <mvc:resources mapping="/attached/**" location="/attached/" cache-period="31556927"/>
 </beans>
 
 
