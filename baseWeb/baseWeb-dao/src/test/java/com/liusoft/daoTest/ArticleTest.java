@@ -47,7 +47,7 @@ public class ArticleTest extends BaseTest {
         PageQuery pageQuery = new PageQuery();
         pageQuery.setCurrentPageNo(1);
         pageQuery.setPageSize(10);
-        pageQuery.addQueryParam("title","测");
+//        pageQuery.addQueryParam("title","测");
         pageQuery.addQueryParam("moduleId","1");
         List<Article> articleList = articleDao.getArticleByPage(pageQuery);
 

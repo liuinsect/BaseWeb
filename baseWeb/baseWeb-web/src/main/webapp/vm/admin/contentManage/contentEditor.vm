@@ -37,6 +37,10 @@
 <div align="center" style="height:100%">
 
     <textarea id="content1" name="content1" cols="100" rows="10" style="width:95%;height:350px;visibility:hidden;">
+        #if( $article )
+            $article.content
+        #end
+
     ##				<%=htmlspecialchars(htmlData)%>
 
     </textarea>

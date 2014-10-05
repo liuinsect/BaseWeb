@@ -47,7 +47,7 @@ public class ArticleDaoImpl extends SqlSessionDaoSupport implements ArticleDao {
     	return this.getSqlSession().selectList(GET_BY_EXAMPLE, article);
     }
     
-    public Article getArticleById(String id) {
+    public Article getArticleById(Integer id) {
     	return (Article) this.getSqlSession().selectOne(GET_BY_ID, id);
     }
     

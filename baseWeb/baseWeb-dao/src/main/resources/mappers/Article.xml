@@ -93,6 +93,7 @@
             and t_module.id=module_id
         </trim>
 
+        order by id desc
 		LIMIT #{startIndex},#{pageSize}
 	</select>
 	

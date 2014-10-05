@@ -55,7 +55,7 @@ public interface ArticleService {
      * @param id
      * @return
      */	
-    public Article getArticleById(String id);
+    public Result getArticleById(Integer id);
     
 	/**
      * 分页取得Article列表

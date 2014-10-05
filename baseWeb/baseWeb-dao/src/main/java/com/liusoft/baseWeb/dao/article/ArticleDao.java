@@ -54,7 +54,7 @@ public interface ArticleDao {
      * @param id
      * @return
      */	
-    public Article getArticleById(String id);
+    public Article getArticleById(Integer id);
     
 	/**
      * 分页取得Article列表

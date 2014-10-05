@@ -124,7 +124,7 @@ $(document).ready(function () {
     $pager.pagination({
         onSelectPage: function (pageNumber, pageSize) {
             // 此时的option包含了finalClass、criteria等信息
-            option["pageNumber"] = pageNumber;
+            option["page"] = pageNumber;
             option["pageSize"] = pageSize;
             showArticleList(option);
         }
@@ -221,17 +221,17 @@ function initEditDialog() {
                 plain: true,
                 handler: function () {
                     refreshRow();
-                    var doc;
-                    if (document.all) {//IE
-                        doc = document.frames["myFrame"].document;
-                    } else {//Firefox
-                        doc = document.getElementById("myFrame").contentDocument;
-                    }
-                    var moduleName = doc.getElementById("moduleName").value;
-                    doc.location.href = "kindeditor/jsp/" + moduleName + "demo.jsp?module=" + moduleName;
-//				myFrame.src = "kindeditor/jsp/demo.jsp?moduleName="+moduleName;
-//				var my = document.getElementById("myFrame");
-//				my.setAttribute("src", "kindeditor/jsp/demo.jsp?module="+moduleName);
+//                    var doc;
+//                    if (document.all) {//IE
+//                        doc = document.frames["myFrame"].document;
+//                    } else {//Firefox
+//                        doc = document.getElementById("myFrame").contentDocument;
+//                    }
+//                    var moduleName = doc.getElementById("moduleName").value;
+//                    doc.location.href = "kindeditor/jsp/" + moduleName + "demo.jsp?module=" + moduleName;
+////				myFrame.src = "kindeditor/jsp/demo.jsp?moduleName="+moduleName;
+////				var my = document.getElementById("myFrame");
+////				my.setAttribute("src", "kindeditor/jsp/demo.jsp?module="+moduleName);
                     $companyDialog.dialog('close');
 
                 }
@@ -307,7 +307,7 @@ function showArticleList(option) {
     var $companyList = $('table[name=companyList]', $(globalPanelId));
 
     var option = $.extend({
-        page: 1,
+        page:  $companyList.datagrid("getPager").pagination("options").pageNumber,
         pageSize: $companyList.datagrid("getPager").pagination("options").pageSize,
         finalClass: "Article"
     }, option);
@@ -324,7 +324,6 @@ function showArticleList(option) {
     // 拼criteria结束
     option["finalClass"] = "Article";
 
-
     var $companyList = $('table[name=companyList]', $(globalPanelId));
     gUtils.fAjaxRequest("/admin/contentManage/search.html",option,function (json) {
 //			alert("refreshRow");
@@ -336,7 +335,7 @@ function showArticleList(option) {
         replaceT(artiList);
 
         $companyList.datagrid('loadData', {
-            'total': result['articleList'].length,//一次只能上传一个文章
+            'total': result['pageQuery'].totalCount,//一次只能上传一个文章
             'rows': artiList
         });
 
@@ -364,7 +363,7 @@ function add() {
     // 用$companyDialog.show();无效，$companyDialog已被重新包装
 //    $companyDialog.dialog('open');
 
-    $companyDialog.dialog('refresh', '/admin/contentManage/dialog.html?type=add');
+    $companyDialog.dialog('refresh', '/admin/contentManage/dialogAdd.html');
     $companyDialog.dialog('open');
 
 //    var doc;
@@ -399,31 +398,10 @@ function edit() {
     }
 
     showRetrieveProgressBar(true);
+    $companyDialog.dialog('refresh', '/admin/contentManage/dialogUpdate.html?type=update&&articleId='+globalCurrentRowData.id);
+    $companyDialog.dialog('open');
+    showRetrieveProgressBar(false);
 
-    $.post("contentLoadAction!loadById.action", {
-        'id': globalCurrentRowData.id,
-        'timestamp': new Date()
-    }, function (json) {
-        if (json['message'] != 'success') {
-            alert(json['message']);
-            return;
-        }
-
-        // 重新打开dialog
-        // 用$companyDialog.show();无效，$companyDialog已被重新包装
-        $companyDialog.dialog('open');
-        // 清空数据
-        clearEditData();
-
-        showRetrieveProgressBar(false);
-
-        var id = json['arti'].id;
-        var title = json['arti'].title;
-        var content = json['arti'].content;
-        //id,title,content
-        fillContent(id, title, content);
-
-    }, 'json');
 }
 
 /**
@@ -472,6 +450,8 @@ function pubArticle() {
 
     var articleTitle = jQuery('#articleTilte').val();
 
+    var articleId = jQuery('#articleId').val();
+
     var moduleId = jQuery('#moduleId').val();
 
     var url = jQuery('#contentForm').attr("action");
@@ -485,6 +465,7 @@ function pubArticle() {
         data:{
             'articleTitle':articleTitle,
             'moduleId':moduleId,
+            "articleId":articleId,
             'content':content
         },
         success : function(data,textStatus){

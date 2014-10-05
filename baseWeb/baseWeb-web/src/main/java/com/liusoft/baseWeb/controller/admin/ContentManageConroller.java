@@ -64,22 +64,30 @@ public class ContentManageConroller extends BaseController{
     @RequestMapping(value="contentEditor.html")
      @ResponseBody
      public Object contentEditor(HttpServletRequest request){
+        String articleIdStr = request.getParameter("articleId");
+        if( StringUtils.isNotBlank(articleIdStr) ){
+            Result result = articleService.getArticleById(Integer.valueOf(articleIdStr));
+            return view(PREFIX +"contentEditor",result);
+        }
+
         return view(PREFIX +"contentEditor");
     }
 
-    @RequestMapping(value="dialog.html")
+    @RequestMapping(value="dialogAdd.html")
     @ResponseBody
-    public Object dialog(HttpServletRequest request){
+    public Object dialogAdd(HttpServletRequest request){
         Result result =  moduleService.getAllModule();
-        String type = request.getParameter("type");
-        if( "add".equals(type) ){
-            result.addDefaultModel("submitUrl","/"+PREFIX+"contentAdd.html");
-        }else{
-            result.addDefaultModel("submitUrl","/"+PREFIX+"contentUpdate.html");
-            result.addDefaultModel("articleId",request.getParameter("articleId"));
-        }
+        result.addDefaultModel("submitUrl","/"+PREFIX+"contentAdd.html");
+        return view(PREFIX +"dialogAdd",result);
+    }
 
-        return view(PREFIX +"dialog",result);
+    @RequestMapping(value="dialogUpdate.html")
+    @ResponseBody
+    public Object dialogUpdate(HttpServletRequest request){
+        Result moduleResult =  moduleService.getAllModule();
+        Result result = articleService.getArticleById(Integer.valueOf(request.getParameter("articleId")));
+        moduleResult.appendResult(result);
+        return view(PREFIX +"dialogUpdate",moduleResult);
     }
 
     @RequestMapping(value="contentAdd.html")
@@ -96,6 +104,27 @@ public class ContentManageConroller extends BaseController{
         article.setContent(content);
         article.setModuleId(Integer.valueOf(moduleId));
         Result result = articleService.addArticle(article);
+        return result;
+    }
+
+    @RequestMapping(value="contentUpdate.html")
+    @ResponseBody
+    public Object contentUpdate(HttpServletRequest request){
+        String articleIdStr = request.getParameter("articleId");
+        String title = request.getParameter("articleTitle");
+        String moduleId = request.getParameter("moduleId");
+        String content = request.getParameter("content");
+
+        User loginUser = getLoginUser(request);
+
+        Article article = new Article();
+        article.setTitle(title);
+        article.setAuthor(loginUser.getUserName());
+        article.setContent(content);
+        article.setModuleId(Integer.valueOf(moduleId));
+        article.setId(Integer.valueOf(articleIdStr));
+
+        Result result = articleService.updateArticle(article);
         return result;
     }
 }

@@ -13,6 +13,7 @@ import java.util.List;
 import com.liusoft.baseWeb.client.article.Article;
 import com.liusoft.baseWeb.client.common.PageQuery;
 import com.liusoft.baseWeb.client.common.Result;
+import com.liusoft.baseWeb.client.util.StringUtils;
 import com.liusoft.baseWeb.dao.article.ArticleDao;
 import com.liusoft.baseWeb.service.article.ArticleService;
 import org.springframework.stereotype.Component;
@@ -43,7 +44,20 @@ public class ArticleServiceImpl implements ArticleService {
 	
 	public Result updateArticle(Article article) {
 		Result result = new Result();
-		
+
+        Article old = articleDao.getArticleById(article.getId());
+
+        old.setContent(article.getContent());
+        if( StringUtils.isNotBlank( article.getTitle() ) ){
+            old.setTitle(article.getTitle());
+        }
+
+        old.setModuleId(article.getModuleId());
+        old.setModuleName(null);
+        old.setAuthor(article.getAuthor());
+
+        articleDao.updateArticle(old);
+        result.setSuccess(true);
 		return result;
 	}
 	
@@ -59,15 +73,19 @@ public class ArticleServiceImpl implements ArticleService {
 		return null;
 	}
 	
-	public Article getArticleById(String id) {
-		
-		return null;
+	public Result getArticleById(Integer id) {
+        Result result = new Result();
+        Article article = articleDao.getArticleById(id);
+        result.addDefaultModel("article",article);
+        result.setSuccess(true);
+        return result;
 	}
 	
 	public Result getArticleByPage(PageQuery pageQuery) {
 		Result result = new Result();
         List<Article> articleList = articleDao.getArticleByPage(pageQuery);
         result.addDefaultModel("articleList",articleList);
+        result.addDefaultModel("pageQuery",pageQuery);
         result.setSuccess(true);
 		return result;
 	}
