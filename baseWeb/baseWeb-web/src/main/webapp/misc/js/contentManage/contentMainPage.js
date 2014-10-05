@@ -319,8 +319,8 @@ function showArticleList(option) {
     var moduleId = $.trim($("#moduleId", $searchTable).val());
 
     option["moduleId"] = moduleId;
-    option["articleAuthor"] = articleAuthor;
-    option["articleTitle"] = articleTitle;
+    option["author"] = articleAuthor;
+    option["title"] = articleTitle;
     // 拼criteria结束
     option["finalClass"] = "Article";
 
@@ -330,11 +330,9 @@ function showArticleList(option) {
 //			alert("refreshRow");
         var result = json['result'];
 
-        console.log(result);
 
         var artiList = result['articleList'];
 
-        console.log(artiList);
         replaceT(artiList);
 
         $companyList.datagrid('loadData', {

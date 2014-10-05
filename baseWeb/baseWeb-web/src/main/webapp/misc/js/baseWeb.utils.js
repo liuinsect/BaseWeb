@@ -35,6 +35,7 @@
             $.ajax({
                 url: url,
                 dataType: dt,
+                type: "POST",
                 data: param,
                 success: function(data, textStatus) {
                     showRetrieveProgressBar(false);

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="GBK"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
@@ -36,15 +36,15 @@
 		<property name="maxPoolSize">
 			<value type="java.lang.Integer">${maxPoolSize}</value>
 		</property>
-		<!-- Á¬½Ó³ØºÄ¾¡Ê±Ò»´Î»ñÈ¡µÄÁ¬½ÓÊý -->
+		<!-- è¿žæŽ¥æ± è€—å°½æ—¶ä¸€æ¬¡èŽ·å–çš„è¿žæŽ¥æ•° -->
 		<property name="acquireIncrement">
 			<value>${acquireIncrement}</value>
 		</property>
-		<!-- »ñÈ¡ÐÂÁ¬½ÓÊ§°ÜºóÖØÊÔ´ÎÊý -->
+		<!-- èŽ·å–æ–°è¿žæŽ¥å¤±è´¥åŽé‡è¯•æ¬¡æ•° -->
 		<property name="acquireRetryAttempts">
 			<value>${acquireRetryAttempts}</value>
 		</property>
-		<!-- ×î´ó¿ÕÏÐÊ±¼ä -->
+		<!-- æœ€å¤§ç©ºé—²æ—¶é—´ -->
 		<property name="maxIdleTime">
 			<value>${maxIdleTime}</value>
 		</property>
@@ -55,7 +55,7 @@
 		<property name="targetDataSource" ref="targetDataSource" />
 	</bean>
 
-	<!-- ÊÂÎñ¹ÜÀíÆ÷ÅäÖÃ,µ¥Êý¾ÝÔ´ÊÂÎñ -->
+	<!-- äº‹åŠ¡ç®¡ç†å™¨é…ç½®,å•æ•°æ®æºäº‹åŠ¡ -->
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
@@ -63,7 +63,7 @@
 	
 	<!--<bean id="springTransactionTemplate" class="com.jd.gemini.service.transaction.SpringTransactionTemplate"/>-->
 
-	<!-- Ê¹ÓÃannotation¶¨ÒåÊý¾Ý¿âÊÂÎñ£¬ÕâÑù¿ÉÒÔÔÚÀà»ò·½·¨ÖÐÖ±½ÓÊ¹ÓÃ@Transactional×¢½âÀ´ÉùÃ÷ÊÂÎñ -->
+	<!-- ä½¿ç”¨annotationå®šä¹‰æ•°æ®åº“äº‹åŠ¡ï¼Œè¿™æ ·å¯ä»¥åœ¨ç±»æˆ–æ–¹æ³•ä¸­ç›´æŽ¥ä½¿ç”¨@Transactionalæ³¨è§£æ¥å£°æ˜Žäº‹åŠ¡ -->
 <!--	<tx:annotation-driven transaction-manager="transactionManager" />-->
 
 

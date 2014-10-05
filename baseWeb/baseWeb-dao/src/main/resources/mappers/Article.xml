@@ -85,7 +85,7 @@
 	<select id="getByPage" resultMap="articleInfoMap" parameterType="java.util.HashMap">
 		SELECT <include refid="fields" />,t_module.name as module_name FROM t_article,t_module
         <trim prefix="where" prefixOverrides="and | or" suffixOverrides=",">
-            <if test="title != null">and title = #{title}</if>
+            <if test="title != null">and title  like "%"#{title}"%" </if>
             <if test="content != null">and content = #{content}</if>
             <if test="clickNum != null">and click_num = #{clickNum}</if>
             <if test="author != null">and author = #{author}</if>
