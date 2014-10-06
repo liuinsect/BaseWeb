@@ -23,6 +23,8 @@
 
     <bean id="privilegeOfRoleService" class="com.liusoft.baseWeb.service.privilegeofrole.impl.PrivilegeOfRoleServiceImpl"/>
 
+    <bean id="decorateInfoService" class="com.liusoft.baseWeb.service.decorateinfo.impl.DecorateInfoServiceImpl"/>
+
 
 
 </beans>

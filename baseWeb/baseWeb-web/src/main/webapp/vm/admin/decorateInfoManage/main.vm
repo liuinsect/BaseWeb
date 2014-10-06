@@ -1,0 +1,26 @@
+<script type="text/javascript" 	src="/misc/js/decorateInfoManage/mainPage.js" charset="utf-8"></script>
+
+<div fit="true" title="内容列表" style="border: 0px"
+     id="basicInformationCollection_NetBarDesc_panel">
+
+    <!-- 一个包含north/center布局的主界面 -->
+    <div class="easyui-layout" fit="true"
+         style="overflow: hidden; background-color: #EBF3FD">
+        <!-- center的north，显示查询界面（第二层div，高度固定）-->
+        <div region='north' style="height: 65px; background-color: #EBF3FD; overflow: hidden; border: 0px">
+            <!-- 查询界面独立出来 -->
+            #parse("/admin/decorateInfoManage/operation.vm");
+        </div>
+
+        <div region='center' style="overflow: auto; border: 0px">
+            <table name="decorateInfoList">
+            </table>
+        </div>
+    </div>
+
+    <!-- 对话框 -->
+    <div name='decorateInfoDialog' style="padding: 2px; width: 950px; height: 600px; display: none;">
+    </div>
+    <!-- 结束 -->
+</div>
+

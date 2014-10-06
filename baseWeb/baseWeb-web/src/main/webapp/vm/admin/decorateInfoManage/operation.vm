@@ -28,33 +28,32 @@
 				<td>
 					<table width="100%"">
 						<tr>
-                            <td style="width: 10%">
-                                账户类型：
+							<td style="width: 50px;">
+								标题
+							</td>
+							<td style="width: 200px;">
+								<input type="text" id='title' />
+							</td>
+							<td style="width: 80px;">
+								信息发布人
+							</td>
+							<td style="width: 200px;">
+								<input type="text" id='author' />
+							</td>
+                            <td style="width: 80px;">
+                                所属业主
                             </td>
                             <td>
-                                <select id="roleId" >
-                                    <option value="" >全部</option>
-                                    #foreach($role in $roleList)
-                                        <option value="$role.id" >$role.name</option>
+
+                                <select  id="userId">
+                                    <option  value="">全部</option>
+                                    #foreach($user in $userList)
+                                        <option value="$user.userId" >$user.userName</option>
                                     #end
                                 </select>
                             </td>
 
-							<td style="width: 5%">
-								账户：
-							</td>
-							<td>
-								<input type="text" id='account' />
-							</td>
-
-                            <td style="width: 10%">
-                                用户姓名：
-                            </td>
-                            <td>
-                                <input type="text" id='userName' />
-                            </td>
-
-             </tr>
+						</tr>
 					</table>
 				</td>
 			</tr>

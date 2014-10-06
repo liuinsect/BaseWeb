@@ -1,0 +1,16 @@
+<div title="信息管理" icon="icon-add" selected="true"
+     style="overflow: auto;">
+    <ul class="navigator-tree" state='closed'>
+        <li>
+            <span><font size="2">裝修信息管理</font> </span>
+            <ul>
+                <li>
+                    <span><a href="javascript:void(0)"
+                             class="basicInformationCollection" finalClass="NetBarDesc"
+                             url="decorateInfoManage/main.html">裝修信息列表</a> </span>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</div>

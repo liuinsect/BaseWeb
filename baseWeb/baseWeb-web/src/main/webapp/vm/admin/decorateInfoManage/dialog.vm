@@ -1,0 +1,32 @@
+<!-- 对话框 -->
+    <form  id='c'  method="post" enctype="multipart/form-data">
+
+
+
+
+        <!-- 对话框包含一个form -->
+        <input type="hidden" name='finalClass' value="Article" />
+        <input type="hidden" name='leaderPicFlag' />
+        <div class="easyui-tabs" style="height: 500px;">
+            <div title="请填写相关内容" style="padding: 2px;">
+
+                <div align="left" style="padding-bottom:3px;padding-left:20px;padding-top:8px;">
+                    文章标题：
+                    <input class="easyui-validatebox" required="true" type="text" id='articleTilte' name='articleTilte' maxlength="50" size="50" />
+                    所属模块
+                    <select id="moduleId" name="moduleId" style="width: 110px">
+                        #foreach($module in $modulelist)
+                            <option value="$module.id" >$module.name</option>
+                        #end
+                    </select>
+
+                </div>
+                <!-- form又包含一个tabs布局 -->
+                <iframe name="myFrame" id="myFrame" src="/admin/contentManage/contentEditor.html"
+                        height="95%" width="100%" marginwidth="0" framespacing="0" marginheight="0" frameborder="0" scrolling="no">
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
+
+            </div>
+        </div>
+    </form>

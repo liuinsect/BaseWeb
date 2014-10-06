@@ -1,0 +1,34 @@
+<!-- 对话框 -->
+    <form  id='decorateInfoForm' action="/admin/decorateInfoManage/updateDecorate.html" method="post" enctype="multipart/form-data">
+
+        <!-- 对话框包含一个form -->
+        <input type="hidden" name='finalClass' value="DecorateInfo" />
+        <input type="hidden" name='leaderPicFlag' />
+        <input type="hidden" id="decorateInfoId" name='decorateInfoId' value="${decorateInfo.id}" />
+
+        <div class="easyui-tabs" style="height: 500px;">
+            <div title="请填写相关内容" style="padding: 2px;">
+
+            <div align="left" style="padding-bottom:3px;padding-left:20px;padding-top:8px;">
+                所属业主
+                <select  id="userId" name="userId">
+                    #foreach($user in $userList)
+                        <option value="$user.userId" #if( $user.userId == $decorateInfo.userId ) selected  #end >$user.userName</option>
+                    #end
+                </select>
+                标题：
+                <input class="easyui-validatebox" required="true" type="text"
+                       id='title' name='title' maxlength="50" size="50"
+                        value="$!{decorateInfo.title}"/>
+
+            </div>
+
+                <!-- form又包含一个tabs布局 -->
+                <iframe name="myFrame" id="myFrame" src="/admin/decorateInfoManage/contentEditor.html?decorateInfoId=$!{decorateInfo.id}"
+                        height="95%" width="100%" marginwidth="0" framespacing="0" marginheight="0" frameborder="0" scrolling="no">
+                    <p>Your browser does not support iframes.</p>
+                </iframe>
+
+            </div>
+        </div>
+    </form>

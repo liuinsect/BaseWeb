@@ -16,4 +16,6 @@
 
     <bean id="articleDao" class="com.liusoft.baseWeb.dao.article.impl.ArticleDaoImpl"/>
 
+    <bean id="decorateInfoDao" class="com.liusoft.baseWeb.dao.decorateinfo.impl.DecorateInfoDaoImpl"/>
+
 </beans>

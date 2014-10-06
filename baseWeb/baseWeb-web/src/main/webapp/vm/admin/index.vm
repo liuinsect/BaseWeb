@@ -19,48 +19,7 @@
 			style="width: 237px; padding-right: 0px; overflow: hidden">
 			<div fit="true" class="easyui-accordion"
 				style="float: left; padding: 1px; padding-right: 0px; border-right: none;">
-				<div title="信息管理" icon="icon-add" selected="true"
-					style="overflow: auto;">
-					<ul class="navigator-tree" state='closed'>
-						<li>
-							<span><font size="2">前台内容管理</font> </span>
-							<ul>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentManage/main.html">内容列表</a> </span>
-								</li>
-
-							</ul>
-						</li>
-##						<li>
-##						<span><font size="2">文件上传</font> </span>
-##							<ul>
-##								<li>
-##									<span><a href="javascript:void(0)"
-##										class="basicInformationCollection" finalClass="NetBarDesc"
-##										url="filesUpload/filesUploadMain.jsp">开放基金</a> </span>
-##								</li>
-##
-##							</ul>
-##						</li>
-					</ul>
-				</div>
-				<div title="辅助功能" icon="icon-add" selected="false"
-					style="overflow: auto; width: 100%">
-					<ul class="navigator-tree" id='leftChoice'>
-						<li>
-							<span>用户管理</span>
-							<ul>
-								<li>
-									<span><a href="javascript:void(0)"
-									class="basicInformationCollection" finalClass="NetBarDesc"
-										url="userManage/main.html">用户列表</a> </span>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
+                    #parse("/admin/menu/menu_role_${loginUser.roleId}.vm")
 			</div>
 
 		</div>
@@ -75,12 +34,6 @@
 		</div>
 		<!-- 结束 -->
 
-		<div region="south" split='true'
-			style="height: 20px; background-color: #A4BED4; overflow: hidden;">
-			<div align="center">
-				版权所有：&nbsp; 重庆邮电大学&nbsp;&nbsp;&nbsp; 重庆邮电大学授权文化执法大队使用
-			</div>
-		</div>
 
 	</body>
 </html>

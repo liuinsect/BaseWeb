@@ -1,0 +1,31 @@
+<div title="信息管理" icon="icon-add" selected="true"
+     style="overflow: auto;">
+    <ul class="navigator-tree" state='closed'>
+        <li>
+            <span><font size="2">前台内容管理</font> </span>
+            <ul>
+                <li>
+                    <span><a href="javascript:void(0)"
+                             class="basicInformationCollection" finalClass="NetBarDesc"
+                             url="contentManage/main.html">内容列表</a> </span>
+                </li>
+
+            </ul>
+        </li>
+    </ul>
+</div>
+<div title="辅助功能" icon="icon-add" selected="false"
+     style="overflow: auto; width: 100%">
+    <ul class="navigator-tree" id='leftChoice'>
+        <li>
+            <span>用户管理</span>
+            <ul>
+                <li>
+                    <span><a href="javascript:void(0)"
+                         class="basicInformationCollection" finalClass="NetBarDesc"
+                         url="userManage/main.html">用户列表</a> </span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

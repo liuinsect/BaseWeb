@@ -7,7 +7,7 @@ var globalCurrentRowData = null;
 var globalCurrentRowIndex = null;
 
 // 公司对话框
-var $userDialog = null;
+var $decorateInfoDialog = null;
 
 // 进度条
 var $globalDivOneForRetrieve = null;
@@ -26,7 +26,7 @@ $(document).ready(function () {
     var $linkButtonSearch = $("a.easyui-linkbutton:contains('查找')", $searchTable);
     $linkButtonSearch.linkbutton();
     $linkButtonSearch.click(function () {
-        showUserList(option);
+        showArticleList(option);
     });
 
     var $linkButtonReset = $("a.easyui-linkbutton:contains('重置')", $searchTable);
@@ -36,9 +36,9 @@ $(document).ready(function () {
     });
 
     // 公司列表table的初始化
-    var $userList = $('table[name=userList]', $(globalPanelId));
-    $userList.datagrid({
-        title: '用户列表',
+    var $decorateInfoList = $('table[name=decorateInfoList]', $(globalPanelId));
+    $decorateInfoList.datagrid({
+        title: '裝修信息列表',
         idField: 'id',
         singleSelect: true,
         fitColumns: true,
@@ -72,8 +72,8 @@ $(document).ready(function () {
         columns: [
             [
                 {
-                    field: 'account',
-                    title: '账户名称',
+                    field: 'title',
+                    title: '标题',
                     width: 50,
                     align: 'center',
                     formatter: function (value, rowData, rowIndex) {
@@ -84,14 +84,14 @@ $(document).ready(function () {
                     }
                 },
                 {
-                    field: 'userName',
-                    title: '用户姓名',
+                    field: 'author',
+                    title: '信息发布人',
                     width: 50,
                     align: 'center'
                 },
                 {
-                    field: 'roleName',
-                    title: '用户类型',
+                    field: 'createTime',
+                    title: '文章发布时间',
                     width: 50,
                     align: 'center'
                 }
@@ -114,25 +114,25 @@ $(document).ready(function () {
         }
     });
     // 公司列表中分页的初始化
-    var $pager = $userList.datagrid("getPager");
+    var $pager = $decorateInfoList.datagrid("getPager");
     $pager.pagination({
         onSelectPage: function (pageNumber, pageSize) {
             // 此时的option包含了finalClass、criteria等信息
             option["page"] = pageNumber;
             option["pageSize"] = pageSize;
-            showUserList(option);
+            showArticleList(option);
         }
     });
 
     // 对话框的处理，如果存在initialized=true的对话框，那是上次的遗留，破坏掉
     // 对话框会上移到body的子元素一层，需要手动移除
-    $userDialog = $("div[name=userDialog][initialized=true]");
-    $userDialog.dialog('destroy');
+    $decorateInfoDialog = $("div[name=decorateInfoDialog][initialized=true]");
+    $decorateInfoDialog.dialog('destroy');
     if (globalMenuClass == "basicInformationCollection") {
         initEditDialog();
     }
-    $userDialog = $("div[name=userDialog][initialized=true]");
-    $userDialog.dialog('close');
+    $decorateInfoDialog = $("div[name=decorateInfoDialog][initialized=true]");
+    $decorateInfoDialog.dialog('close');
 
     // 进度条的处理
     $globalDivOneForRetrieve = $("<div class='datagrid-mask' style='display: block; width: 100%; height: 100%;'></div>");
@@ -144,7 +144,7 @@ $(document).ready(function () {
 
     $globalDivOneForSave = $("<div class='datagrid-mask' style='display: block; width: 100%; height: 100%;'></div>");
     $globalDivTwoForSave = $("<div class='datagrid-mask-msg' style='display: block; left: 369px; top: 165px;'>系统处理中，请等待····</div>");
-    $userDialog.append($globalDivOneForSave).append($globalDivTwoForSave);
+    $decorateInfoDialog.append($globalDivOneForSave).append($globalDivTwoForSave);
     $globalDivOneForSave.hide();
     $globalDivTwoForSave.hide();
 
@@ -190,11 +190,11 @@ function showSaveProgressBar(bShow) {
  */
 function initEditDialog() {
     // 创建对话框
-    var $userDialog = $("div[name=userDialog]", $(globalPanelId));
+    var $decorateInfoDialog = $("div[name=decorateInfoDialog]", $(globalPanelId));
 
-    $userDialog.show();
-    $userDialog.dialog({
-        title: '新增用户',
+    $decorateInfoDialog.show();
+    $decorateInfoDialog.dialog({
+        title: '新增裝修进度',
         modal: true,
         buttons: [
             {
@@ -202,32 +202,11 @@ function initEditDialog() {
                 iconCls: 'icon-save',
                 plain: true,
                 handler: function () {
-                    showSaveProgressBar(true);
-                    $('#userForm').form('submit',{
-                        url:$('#userForm').attr("action"),
-                        onSubmit: function(){
-                            if ($(this).form('validate')){
-
-                                var password = jQuery("input[name='password']").val();
-                                var repassword = jQuery("input[name='rePassword']").val();
-                                if( password != repassword ){
-                                    alert("两次输入的密码不一致");
-                                    return false;
-                                }
-
-                                return  true;
-                            }
-                            return false;
-                        },
-                        success:function(data){
-                            var data = eval('(' + data + ')');
-                            gUtils.fProcessResult(data, function(data){
-                                showSaveProgressBar(false);
-                                refreshRow();
-                                $userDialog.dialog('close');
-                            });
-                        }
-                    });
+                    var $form = $("form", $decorateInfoDialog);
+                    if ($form.form('validate')) {
+                        showSaveProgressBar(true);
+                        addDecorateInfo();
+                    }
                 }
             },
             {
@@ -236,7 +215,7 @@ function initEditDialog() {
                 plain: true,
                 handler: function () {
                     refreshRow();
-                    $userDialog.dialog('close');
+                    $decorateInfoDialog.dialog('close');
 
                 }
             }
@@ -244,14 +223,14 @@ function initEditDialog() {
     });
 
     // 加验证
-    $("input.easyui-validatebox", $userDialog).validatebox();
+    $("input.easyui-validatebox", $decorateInfoDialog).validatebox();
 
 
     // 布局tabs
-    $("div.easyui-tabs", $userDialog).tabs();
+    $("div.easyui-tabs", $decorateInfoDialog).tabs();
 
     // 增加一个对话框已经初始化的标志
-    $userDialog.attr("initialized", "true");
+    $decorateInfoDialog.attr("initialized", "true");
 }
 
 /**
@@ -259,7 +238,7 @@ function initEditDialog() {
  */
 function refreshRow() {
 
-    showUserList({});
+    showArticleList({});
 
 }
 
@@ -269,42 +248,44 @@ function refreshRow() {
  * @param {}
  *            option
  */
-function showUserList(option) {
+function showArticleList(option) {
 
-    var $userList = $('table[name=userList]', $(globalPanelId));
+    var $decorateInfoList = $('table[name=decorateInfoList]', $(globalPanelId));
 
     var option = $.extend({
-        page:  $userList.datagrid("getPager").pagination("options").pageNumber,
-        pageSize: $userList.datagrid("getPager").pagination("options").pageSize,
+        page:  $decorateInfoList.datagrid("getPager").pagination("options").pageNumber,
+        pageSize: $decorateInfoList.datagrid("getPager").pagination("options").pageSize,
         finalClass: "Article"
     }, option);
 
     var $searchTable = $("table[name=query]", $(globalPanelId));
 
-    var roleId = $.trim($("#roleId", $searchTable).val());
-    var account = $.trim($("#account", $searchTable).val());
-    var userName = $.trim($("#userName", $searchTable).val());
+    var title = $.trim($("#title", $searchTable).val());
+    var author = $.trim($("#author", $searchTable).val());
+    var userId = $.trim($("#userId", $searchTable).val());
 
-    option["roleId"] = roleId;
-    option["account"] = account;
-    option["userName"] = userName;
+    option["title"] = title;
+    option["author"] = author;
+    option["userId"] = userId;
     // 拼criteria结束
     option["finalClass"] = "Article";
 
-    var $userList = $('table[name=userList]', $(globalPanelId));
-    gUtils.fAjaxRequest("/admin/userManage/search.html",option,function (json) {
+    var $decorateInfoList = $('table[name=decorateInfoList]', $(globalPanelId));
+    gUtils.fAjaxRequest("/admin/decorateInfoManage/search.html",option,function (json) {
 //			alert("refreshRow");
         var result = json['result'];
 
 
-        var userList = result['userList'];
+        var decorateInfoList = result['decorateInfoList'];
 
-        $userList.datagrid('loadData', {
+        replaceT(decorateInfoList);
+
+        $decorateInfoList.datagrid('loadData', {
             'total': result['pageQuery'].totalCount,//一次只能上传一个文章
-            'rows': userList
+            'rows': decorateInfoList
         });
 
-        $userList.datagrid("clearSelections");
+        $decorateInfoList.datagrid("clearSelections");
         globalCurrentRowData = null;
         globalCurrentRowIndex = null;
 
@@ -324,12 +305,9 @@ function replaceT(aa) {
  * 打开对话框，增加一条新的公司记录
  */
 function add() {
-    $userDialog.dialog('refresh', '/admin/userManage/dialogAdd.html');
-    $userDialog.dialog('open');
-
+    $decorateInfoDialog.dialog('refresh', '/admin/decorateInfoManage/dialogAdd.html');
+    $decorateInfoDialog.dialog('open');
 }
-
-
 
 /**
  * 打开对话框，编辑公司信息
@@ -340,8 +318,8 @@ function edit() {
     }
 
     showRetrieveProgressBar(true);
-    $userDialog.dialog('refresh', '/admin/userManage/dialogUpdate.html?userId='+globalCurrentRowData.userId);
-    $userDialog.dialog('open');
+    $decorateInfoDialog.dialog('refresh', '/admin/decorateInfoManage/dialogUpdate.html?decorateInfoId='+globalCurrentRowData.id);
+    $decorateInfoDialog.dialog('open');
     showRetrieveProgressBar(false);
 
 }
@@ -358,11 +336,69 @@ function deleteRow() {
     }
 
     var param={
-        'userId': globalCurrentRowData.userId
+        'decorateInfoId': globalCurrentRowData.id
     }
-    gUtils.fAjaxRequest("/admin/userManage/delUser.html",param,function(json){
+    gUtils.fAjaxRequest("/admin/decorateInfoManage/delDecorate.html",param,function(json){
         refreshRow()
     });
 
 
 }
+
+
+function addDecorateInfo() {
+    var doc;
+    if (document.all) {//IE
+        doc = document.frames["myFrame"].document;
+    } else {//Firefox
+        doc = document.getElementById("myFrame").contentDocument;
+    }
+    var editFrame;
+    if (document.all) {//IE
+        editFrame = doc.frames["editFrame"].document;
+    } else {//Firefox
+        editFrame = doc.getElementById("editFrame").contentDocument;
+    }
+
+    var htmls = editFrame.getElementsByTagName("body");
+    var html_element = htmls[0];
+
+    var content = html_element.innerHTML;
+
+    var title = jQuery('#decorateInfoForm').find('#title').val();
+
+    var userId = jQuery('#decorateInfoForm').find('#userId').val();
+
+    var url = jQuery('#decorateInfoForm').attr("action");
+
+    var decorateInfoId = jQuery('#decorateInfoForm').find('#decorateInfoId').val()
+
+    $.ajax({
+        url : url,
+        async:false,
+        type: "POST",
+        dataType: "json",
+        data:{
+            'title':title,
+            'userId':userId,
+            'decorateInfoId':decorateInfoId,
+            'content':content
+        },
+        success : function(data,textStatus){
+            gUtils.fProcessResult(data, function(data){
+                showSaveProgressBar(false);
+                refreshRow();
+                $decorateInfoDialog.dialog('close');
+            });
+
+        },
+        error: function(xhr, status, errMsg) {
+            alert('Ajax请求出错啦！');
+            showSaveProgressBar(false);
+        }
+    });
+
+}
+
+
+

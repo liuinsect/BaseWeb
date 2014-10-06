@@ -10,6 +10,7 @@
         <typeAlias alias="Article" type="com.liusoft.baseWeb.client.article.Article" />
         <typeAlias alias="Role" type="com.liusoft.baseWeb.client.role.Role" />
         <typeAlias alias="PrivilegeOfRole" type="com.liusoft.baseWeb.client.privilegeofrole.PrivilegeOfRole" />
+        <typeAlias alias="DecorateInfo" type="com.liusoft.baseWeb.client.decorateinfo.DecorateInfo" />
     </typeAliases>
 
     <mappers>
@@ -18,7 +19,7 @@
         <mapper resource="mappers/Article.xml" />
         <mapper resource="mappers/PrivilegeOfRole.xml" />
         <mapper resource="mappers/Role.xml" />
-
-
+        <mapper resource="mappers/DecorateInfo.xml" />
     </mappers>
+
 </configuration>
