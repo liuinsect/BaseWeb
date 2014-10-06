@@ -1,0 +1,30 @@
+<form id="userForm" method="post" action="/admin/userManage/addUser.html">
+    <table cellpadding="5">
+        <tr>
+            <td>用户姓名:</td>
+            <td><input class="easyui-textbox easyui-validatebox" type="text"  name="userName" required="true" /></td>
+        </tr>
+        <tr>
+            <td>用户账户:</td>
+            <td><input class="easyui-textbox easyui-validatebox" type="text" name="account" required="true" /></td>
+        </tr>
+        <tr>
+            <td>初始密码:</td>
+            <td><input class="easyui-textbox easyui-validatebox" type="password" name="password" required="true" /></td>
+        </tr>
+        <tr>
+            <td>再次输入密码:</td>
+            <td><input class="easyui-textbox easyui-validatebox" type="password" name="rePassword" required="true" /></td>
+        </tr>
+        <tr>
+            <td>指定角色:</td>
+            <td>
+                <select class="easyui-combobox" name="roleId">
+                    #foreach($role in $roleList)
+                        <option value="$role.id" >$role.name</option>
+                    #end
+                </select>
+            </td>
+        </tr>
+    </table>
+</form

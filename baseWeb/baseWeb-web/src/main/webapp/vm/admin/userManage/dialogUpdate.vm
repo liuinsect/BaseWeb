@@ -1,0 +1,43 @@
+<form id="userForm" method="post" action="/admin/userManage/updateUser.html">
+    <input type="hidden" name='userId' value="${user.userId}" />
+    <table cellpadding="5">
+        <tr>
+            <td>用户姓名:</td>
+            <td>
+                <input class="easyui-textbox easyui-validatebox" type="text"  name="userName" value="$user.userName" />
+            </td>
+        </tr>
+        <tr>
+            <td>用户账户:</td>
+            <td>
+                <input class="easyui-textbox easyui-validatebox" type="text" name="account"  value="$user.account" />
+            </td>
+        </tr>
+        <tr>
+            <td>旧密码:</td>
+            <td>
+                <input class="easyui-textbox easyui-validatebox" type="password" name="oldpassword" required="true" />
+            </td>
+        </tr>
+        <tr>
+            <td>新密码:</td>
+            <td>
+                <input class="easyui-textbox easyui-validatebox" type="password" name="password"  />
+            </td>
+        </tr>
+        <tr>
+            <td>再次输入密码:</td>
+            <td><input class="easyui-textbox easyui-validatebox" type="password" name="rePassword"  /></td>
+        </tr>
+        <tr>
+            <td>指定角色:</td>
+            <td>
+                <select class="easyui-combobox" name="roleId">
+                    #foreach($role in $roleList)
+                        <option value="$role.id"  #if( $role.id == $user.roleId ) selected  #end>$role.name</option>
+                    #end
+                </select>
+            </td>
+        </tr>
+    </table>
+</form

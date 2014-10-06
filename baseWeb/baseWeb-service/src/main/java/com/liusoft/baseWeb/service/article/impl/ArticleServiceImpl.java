@@ -61,9 +61,10 @@ public class ArticleServiceImpl implements ArticleService {
 		return result;
 	}
 	
-	public Result deleteArticle(String id) {
+	public Result deleteArticle(Integer id) {
 		Result result = new Result();
-		
+        articleDao.deleteArticle(id);
+        result.setSuccess(true);
 		return result;
     }
 	

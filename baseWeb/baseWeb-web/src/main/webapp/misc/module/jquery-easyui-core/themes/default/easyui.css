@@ -1402,3 +1402,14 @@ a.s-btn-plain-active .s-btn-downarrow{
 	*zoom:1;
 	overflow:hidden;
 }
+
+.textbox .textbox-text {
+    border: 0 none;
+    border-radius: 5px;
+    font-size: 12px;
+    margin: 0;
+    outline-style: none;
+    padding: 4px;
+    resize: none;
+    vertical-align: top;
+}

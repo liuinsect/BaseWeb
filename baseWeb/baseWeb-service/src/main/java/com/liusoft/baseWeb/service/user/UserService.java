@@ -55,7 +55,7 @@ public interface UserService {
      * @param id
      * @return
      */	
-    public User getUserById(Integer id);
+    public Result getUserById(Integer id);
     
 	/**
      * 分页取得User列表

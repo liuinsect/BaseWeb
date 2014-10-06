@@ -1,5 +1,7 @@
 package com.liusoft.daoTest;
 
+import com.liusoft.baseWeb.client.article.Article;
+import com.liusoft.baseWeb.client.common.PageQuery;
 import com.liusoft.baseWeb.client.role.Role;
 import com.liusoft.baseWeb.client.user.User;
 import com.liusoft.baseWeb.dao.role.RoleDao;
@@ -29,5 +31,29 @@ public class UserTest extends BaseTest {
 
         System.out.println(userList);
     }
+
+    @Test
+    public void 搜索用户_test() {
+        PageQuery pageQuery = new PageQuery();
+        pageQuery.setCurrentPageNo(1);
+        pageQuery.setPageSize(10);
+//        pageQuery.addQueryParam("title","测");
+//        pageQuery.addQueryParam("moduleId","1");
+        List<User> userList = userDao.getUserByPage(pageQuery);
+
+        System.out.println(userList);
+    }
+
+    @Test
+    public void 更新用户信息_test() {
+        User user = new User();
+        user.setUserName("管理员1");
+        user.setUserId(1);
+
+        System.out.println(userDao.getUserById(1));
+        userDao.updateUser(user);
+        System.out.println(userDao.getUserById(1));
+    }
+
 
 }

@@ -39,7 +39,7 @@ public class ArticleDaoImpl extends SqlSessionDaoSupport implements ArticleDao {
     	this.getSqlSession().update(UPDATE, article);
     }
     
-    public void deleteArticle(String id) {
+    public void deleteArticle(Integer id) {
     	this.getSqlSession().update(DELETE, id);
     }
     	

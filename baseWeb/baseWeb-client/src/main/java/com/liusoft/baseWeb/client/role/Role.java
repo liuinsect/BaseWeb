@@ -23,7 +23,7 @@ public class Role implements Serializable {
     /**
      * 
      */
-	private String roleName;
+	private String name;
 	
 	
 	public Role() {
@@ -36,20 +36,20 @@ public class Role implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	
-	public String getRoleName() {
-		return roleName;
-	}
-	
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-	}
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     public String toString() {
         return "Role{" +
                 "id=" + id +
-                ", roleName='" + roleName + '\'' +
+                ", name='" + name + '\'' +
                 '}';
     }
 }

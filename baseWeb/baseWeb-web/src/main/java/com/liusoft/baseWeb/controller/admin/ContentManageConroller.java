@@ -62,7 +62,6 @@ public class ContentManageConroller extends BaseController{
     }
 
     @RequestMapping(value="contentEditor.html")
-     @ResponseBody
      public Object contentEditor(HttpServletRequest request){
         String articleIdStr = request.getParameter("articleId");
         if( StringUtils.isNotBlank(articleIdStr) ){
@@ -74,7 +73,6 @@ public class ContentManageConroller extends BaseController{
     }
 
     @RequestMapping(value="dialogAdd.html")
-    @ResponseBody
     public Object dialogAdd(HttpServletRequest request){
         Result result =  moduleService.getAllModule();
         result.addDefaultModel("submitUrl","/"+PREFIX+"contentAdd.html");
@@ -82,7 +80,6 @@ public class ContentManageConroller extends BaseController{
     }
 
     @RequestMapping(value="dialogUpdate.html")
-    @ResponseBody
     public Object dialogUpdate(HttpServletRequest request){
         Result moduleResult =  moduleService.getAllModule();
         Result result = articleService.getArticleById(Integer.valueOf(request.getParameter("articleId")));
@@ -126,5 +123,21 @@ public class ContentManageConroller extends BaseController{
 
         Result result = articleService.updateArticle(article);
         return result;
+    }
+
+    @RequestMapping(value="del.html")
+    @ResponseBody
+    public Object del(HttpServletRequest request){
+        String articleIdStr = request.getParameter("articleId");
+        if( StringUtils.isBlank( articleIdStr ) ){
+            Result result = new Result();
+            result.setMessage("id错误");
+            result.setSuccess(false);
+            return result;
+        }
+
+        Result result = articleService.deleteArticle(Integer.valueOf(articleIdStr));
+        return result;
+
     }
 }

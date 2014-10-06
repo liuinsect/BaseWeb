@@ -39,7 +39,7 @@ public interface ArticleService {
      * 
      * @param id
      */
-    public Result deleteArticle(String id);
+    public Result deleteArticle(Integer id);
     
 	/**
      * 根据example取得Article列表

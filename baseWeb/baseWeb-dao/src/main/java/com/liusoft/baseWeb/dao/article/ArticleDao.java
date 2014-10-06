@@ -38,7 +38,7 @@ public interface ArticleDao {
      * 
      * @param id
      */
-    public void deleteArticle(String id);
+    public void deleteArticle(Integer id);
     
 	/**
      * 根据example取得Article列表

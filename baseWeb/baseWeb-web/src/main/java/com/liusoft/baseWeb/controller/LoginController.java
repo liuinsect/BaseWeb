@@ -77,7 +77,7 @@ public class LoginController extends BaseController {
             return result;
         }
 
-        result.setMessage("用户名或密码不能为空");
+        result.setMessage("用户名或密码错误");
         result.setSuccess(false);
         return result;
     }

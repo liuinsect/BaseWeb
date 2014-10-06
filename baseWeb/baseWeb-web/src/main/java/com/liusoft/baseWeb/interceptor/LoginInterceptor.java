@@ -1,5 +1,6 @@
 package com.liusoft.baseWeb.interceptor;
 
+import com.liusoft.baseWeb.client.common.Result;
 import com.liusoft.baseWeb.client.user.User;
 import com.liusoft.baseWeb.client.util.StringUtils;
 import com.liusoft.baseWeb.common.BaseWebProperties;
@@ -66,7 +67,12 @@ public class LoginInterceptor extends BaseInterceptor {
             return false;
         }
 
-        User user = userService.getUserById(userId);
+        Result result = userService.getUserById(userId);
+        if( !result.isSuccess() ){
+            toLogin(request, response);
+            return false;
+        }
+        User user = (User) result.get("user");
 
         if( user == null ){
             toLogin(request, response);
@@ -78,7 +84,7 @@ public class LoginInterceptor extends BaseInterceptor {
             request.setAttribute("loginUser", user);
             return true;
         }
-
+        toLogin(request, response);
         return false;
 
 	}

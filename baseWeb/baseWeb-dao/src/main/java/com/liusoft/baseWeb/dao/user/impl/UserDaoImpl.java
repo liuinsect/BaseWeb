@@ -53,7 +53,9 @@ public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
     }
     
     public List<User> getUserByPage(PageQuery pageQuery) {
-    	return this.getSqlSession().selectList(GET_BY_PAGE, pageQuery.getParams());
+        int total = count(pageQuery);
+        pageQuery.setTotalCount(total);
+        return this.getSqlSession().selectList(GET_BY_PAGE, pageQuery.getParams());
     }
     	
     public int count(PageQuery pageQuery) {

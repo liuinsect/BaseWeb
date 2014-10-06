@@ -5,23 +5,23 @@
 <mapper namespace="Role">
 	<resultMap id="roleMap" type="Role">
 	<result property="id" column="id" />
-		<result property="roleName" column="role_name" />
+		<result property="name" column="name" />
 	</resultMap>
 
 	<sql id="fields">
-		t_role.id,t_role.role_name
+		t_role.id,t_role.name
 	</sql>
 	
 	<sql id="common-sql">	
 		<trim prefix="where" prefixOverrides="and | or" suffixOverrides=",">
-			<if test="roleName != null">and role_name = #{field.propertyName}</if>
+			<if test="name != null">and name = #{field.propertyName}</if>
 		</trim>
 	</sql>
 	
 	<insert id="add" parameterType="Role">
 		INSERT INTO 
-		t_role(t_role.id,t_role.role_name)
-		VALUES(#{id},#{roleName})
+		t_role(t_role.id,t_role.name)
+		VALUES(#{id},#{name})
 		<selectKey keyProperty="id" resultType="int">
 			select 
 			last_insert_id() as ID from t_role limit 1
@@ -31,7 +31,7 @@
 	<update id="update" parameterType="Role">
 		UPDATE t_role
 		<trim prefix="set" suffixOverrides=",">
-				<if test="roleName != null">role_name = #{roleName},</if>
+				<if test="name != null">name = #{name},</if>
 		</trim>
 		WHERE id = #{id}
 	</update>
@@ -58,6 +58,7 @@
     <select id="getAll" resultMap="roleMap" >
         SELECT <include refid="fields" /> FROM t_role
         <include refid="common-sql" />
+        order by id desc
     </select>
 	
 	<select id="count" resultType="java.lang.Integer" parameterType="java.util.HashMap">

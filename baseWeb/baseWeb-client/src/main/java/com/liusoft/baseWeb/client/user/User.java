@@ -39,6 +39,8 @@ public class User implements Serializable {
      * 
      */
 	private Integer roleId;
+
+    private String roleName;
 	
 	
 	public User() {
@@ -85,6 +87,14 @@ public class User implements Serializable {
 	}
 
 
+    public String getRoleName() {
+        return roleName;
+    }
+
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -93,6 +103,7 @@ public class User implements Serializable {
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", roleId=" + roleId +
+                ", roleName='" + roleName + '\'' +
                 '}';
     }
 

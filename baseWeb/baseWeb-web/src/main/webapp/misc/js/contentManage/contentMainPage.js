@@ -414,18 +414,15 @@ function deleteRow() {
     if (!window.confirm("确定删除当前记录吗?")) {
         return;
     }
-    $.post("contentUpdateAction!delete.action", {
-        'id': globalCurrentRowData.id
-    }, function (json) {
-        if (json['message'] != 'success') {
-            alert(json['message']);
-            return;
-        } else {
-            var $companyList = $('table[name=companyList]',
-                $(globalPanelId));
-            $companyList.datagrid("deleteRow", globalCurrentRowIndex);
-        }
+
+    var param={
+        'articleId': globalCurrentRowData.id
+    }
+    gUtils.fAjaxRequest("/admin/contentManage/del.html",param,function(json){
+        refreshRow()
     });
+
+
 }
 
 

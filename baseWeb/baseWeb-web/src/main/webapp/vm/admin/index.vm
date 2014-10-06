@@ -30,75 +30,20 @@
 										class="basicInformationCollection" finalClass="NetBarDesc"
 										url="contentManage/main.html">内容列表</a> </span>
 								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=ggtz&&divTitle='公告通知'">公告通知</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=xsdwpy&&divTitle='学术队伍培养'">学术队伍培养</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=yjspy&&divTitle=研究生培养">研究生培养</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=yjfx&&divTitle=研究方向">研究方向</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=xsgg&&divTitle=学术骨干">学术骨干</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=kyxm&&divTitle=科研项目">科研项目</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=hjxm&&divTitle=获奖项目及发明专利">获奖项目及发明专利</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=dbxlw&&divTitle=代表性论文和专著">代表性论文和专著</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=yqjs&&divTitle=大型精密贵重仪器介绍">大型精密贵重仪器介绍</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=kfjj&&divTitle=开放基金">开放基金</a> </span>
-								</li>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="contentUpdate/netBarDesc.jsp?module=xsjl&&divTitle=学术交流">学术交流</a> </span>
-								</li>
-								
+
 							</ul>
 						</li>
-						<li>
-						<span><font size="2">文件上传</font> </span>
-							<ul>
-								<li>
-									<span><a href="javascript:void(0)"
-										class="basicInformationCollection" finalClass="NetBarDesc"
-										url="filesUpload/filesUploadMain.jsp">开放基金</a> </span>
-								</li>
-							
-							</ul>
-						</li>
+##						<li>
+##						<span><font size="2">文件上传</font> </span>
+##							<ul>
+##								<li>
+##									<span><a href="javascript:void(0)"
+##										class="basicInformationCollection" finalClass="NetBarDesc"
+##										url="filesUpload/filesUploadMain.jsp">开放基金</a> </span>
+##								</li>
+##
+##							</ul>
+##						</li>
 					</ul>
 				</div>
 				<div title="辅助功能" icon="icon-add" selected="false"
@@ -110,7 +55,7 @@
 								<li>
 									<span><a href="javascript:void(0)"
 									class="basicInformationCollection" finalClass="NetBarDesc"
-										url="userManager/userMain.jsp">修改密码</a> </span>
+										url="userManage/main.html">用户列表</a> </span>
 								</li>
 							</ul>
 						</li>

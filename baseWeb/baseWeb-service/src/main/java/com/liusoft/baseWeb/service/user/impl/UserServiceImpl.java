@@ -36,19 +36,23 @@ public class UserServiceImpl implements UserService {
 
     public Result addUser(User user) {
 		Result result = new Result();
-		
+        user = userDao.addUser(user);
+        result.addDefaultModel("user",user);
+        result.setSuccess(true);
 		return result;
 	}
 	
 	public Result updateUser(User user) {
 		Result result = new Result();
-		
+        userDao.updateUser(user);
+        result.setSuccess(true);
 		return result;
 	}
 	
 	public Result deleteUser(Integer id) {
 		Result result = new Result();
-		
+        userDao.deleteUser(id);
+        result.setSuccess(true);
 		return result;
     }
 	
@@ -56,14 +60,20 @@ public class UserServiceImpl implements UserService {
         return userDao.getListByExample(user);
 	}
 	
-	public User getUserById(Integer id) {
-		
-		return userDao.getUserById(id);
+	public Result getUserById(Integer id) {
+        Result result = new Result();
+        User user = userDao.getUserById(id);
+        result.addDefaultModel("user",user);
+        result.setSuccess(true);
+		return result;
 	}
 	
 	public Result getUserByPage(PageQuery pageQuery) {
 		Result result = new Result();
-		
+        List<User> userList = userDao.getUserByPage(pageQuery);
+        result.addDefaultModel("userList",userList);
+        result.addDefaultModel("pageQuery",pageQuery);
+        result.setSuccess(true);
 		return result;
 	}
 }
