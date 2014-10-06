@@ -37,6 +37,8 @@ public class DecorateInfoController extends BaseController {
 
     public static final String PREFIX = "admin/decorateInfoManage/";
 
+    public static final String VIEW_PREFIX = "admin/decorateInfoView/";
+
 	@Resource
     private DecorateInfoService decorateInfoService;
 
@@ -57,6 +59,17 @@ public class DecorateInfoController extends BaseController {
     }
 
     /**
+     * 浏览主入口
+     */
+    @RequestMapping(value="viewMain.html")
+    public ModelAndView viewMain(HttpServletRequest request){
+        Result result = new Result();
+        User loginUser = getLoginUser(request);
+        result.addDefaultModel("loginUser",loginUser);
+        return view(VIEW_PREFIX +"main",result);
+    }
+
+    /**
      * 搜索
      * @param request
      * @return
@@ -67,6 +80,14 @@ public class DecorateInfoController extends BaseController {
         PageQuery pagequery = convertPageQuery(request);
         User loginUser = getLoginUser(request);
         pagequery.addQueryParam("authorId",loginUser.getUserId());
+        Result result =  decorateInfoService.getDecorateInfoByPage(pagequery);
+        return result;
+    }
+
+    @RequestMapping(value="viewSearch.html")
+    @ResponseBody
+    public Object viewSearch(HttpServletRequest request){
+        PageQuery pagequery = convertPageQuery(request);
         Result result =  decorateInfoService.getDecorateInfoByPage(pagequery);
         return result;
     }
@@ -102,6 +123,13 @@ public class DecorateInfoController extends BaseController {
         List<User> userList = userService.getListByExample(user);
         result.addDefaultModel("userList",userList);
         return view(PREFIX +"dialogUpdate",result);
+    }
+
+    @RequestMapping(value="dialogView.html")
+    public Object dialogView(HttpServletRequest request){
+        String decorateInfoIdStr = request.getParameter("decorateInfoId");
+        Result result= decorateInfoService.getDecorateInfoById(Integer.valueOf(decorateInfoIdStr));
+        return view(VIEW_PREFIX +"dialogView",result);
     }
 
     @RequestMapping(value="addDecorate.html")
@@ -168,5 +196,6 @@ public class DecorateInfoController extends BaseController {
         return userList;
 
     }
-	
+
+
 }

@@ -1,0 +1,7 @@
+<!-- 对话框 -->
+    <!-- 对话框包含一个form -->
+    <div class="easyui-tabs" style="">
+        <div title="$decorateInfo.title" style="padding: 2px;">
+            $decorateInfo.content
+        </div>
+    </div>

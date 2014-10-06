@@ -122,4 +122,19 @@ public class DecorateInfo implements Serializable {
     public void setUserName(String userName) {
         this.userName = userName;
     }
+
+
+    @Override
+    public String toString() {
+        return "DecorateInfo{" +
+                "author='" + author + '\'' +
+                ", id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", authorId=" + authorId +
+                ", createTime=" + createTime +
+                ", userId=" + userId +
+                ", userName='" + userName + '\'' +
+                '}';
+    }
 }

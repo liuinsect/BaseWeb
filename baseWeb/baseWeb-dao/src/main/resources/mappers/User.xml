@@ -50,6 +50,7 @@
 			<if test="account != null">account = #{account},</if>
 			<if test="password != null">password = #{password},</if>
 			<if test="roleId != null">role_id = #{roleId},</if>
+            <if test="userId != null">user_id = #{userId},</if>
 		</trim>
 		WHERE user_id = #{userId}
 	</update>
@@ -77,8 +78,11 @@
             <if test="roleId != null">and role_id = #{roleId}</if>
             and   role_id = t_role.id
         </trim>
+        order by role_id desc
 
 		LIMIT #{startIndex},#{pageSize}
+
+
 	</select>
 	
 	<select id="count" resultType="java.lang.Integer" parameterType="java.util.HashMap">
