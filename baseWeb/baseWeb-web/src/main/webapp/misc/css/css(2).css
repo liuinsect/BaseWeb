@@ -1,0 +1,814 @@
+DIV.mscomFeaturePanelArea {
+	MARGIN: 0px auto
+}
+DIV.vrtc_verticalTabs {
+	MARGIN: 0px auto
+}
+DIV.cspAd {
+	MARGIN-BOTTOM: 25px
+}
+DIV.cspAdControl {
+	PADDING-RIGHT: 18px; PADDING-LEFT: 113px; FLOAT: left; WIDTH: 180px; HEIGHT: 150px
+}
+BODY.rtl DIV.cspAdControl {
+	PADDING-RIGHT: 12px
+}
+IMG.cspAdControl {
+	HEIGHT: 150px
+}
+BODY.CspComponentPreview {
+	BACKGROUND-COLOR: #69b8e1
+}
+BODY.CspComponentPreview DIV.h15-sitebrand {
+	min-width: 932px
+}
+DIV.h15-sitebrand {
+	POSITION: relative; HEIGHT: 60px
+}
+SPAN.h15-logo {
+	LEFT: 16px; POSITION: absolute; TOP: 23px
+}
+SPAN.h15-logo IMG {
+	WIDTH: 132px; HEIGHT: 25px
+}
+SPAN.h15-tagline {
+	RIGHT: 15px; POSITION: absolute; TOP: 30px; TEXT-ALIGN: right
+}
+SPAN.h15-tagline IMG {
+	WIDTH: 225px; HEIGHT: 17px
+}
+DIV.h15-search {
+	RIGHT: 265px; LEFT: 265px; BOTTOM: 28px; POSITION: absolute; TEXT-ALIGN: center
+}
+BODY.CspComponentPreview {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; BACKGROUND-COLOR: #69b8e1
+}
+BODY.CspComponentPreview SPAN.src_wrap_outer {
+	min-width: 393px
+}
+SPAN.src_wrap_outer {
+	DISPLAY: inline-block; DIRECTION: ltr; POSITION: relative
+}
+SPAN.src_wrap_inner {
+	PADDING-RIGHT: 4px; DISPLAY: inline-block; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; POSITION: relative
+}
+BODY.rtl SPAN.src_wrap_inner {
+	DIRECTION: rtl
+}
+
+
+SPAN.src_logo {
+	BACKGROUND-POSITION: 0px 0px; DISPLAY: inline-block; OVERFLOW: hidden; WIDTH: 47px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 22px; BACKGROUND-COLOR: #fff
+}
+INPUT.src_btn-site {
+	BORDER-RIGHT: 0px; PADDING-RIGHT: 0px; BACKGROUND-POSITION: 0px -22px; BORDER-TOP: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; VERTICAL-ALIGN: top; OVERFLOW: hidden; BORDER-LEFT: 0px; WIDTH: 21px; CURSOR: pointer; PADDING-TOP: 0px; BORDER-BOTTOM: 0px; BACKGROUND-REPEAT: no-repeat; HEIGHT: 22px; BACKGROUND-COLOR: #fff
+}
+BODY.rtl INPUT.src_btn-site {
+	BACKGROUND-POSITION: 1px -22px
+}
+A.src_scope_dropdown {
+	PADDING-RIGHT: 0px; BACKGROUND-POSITION: -60px 0px; DISPLAY: inline-block; PADDING-LEFT: 0px; RIGHT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #346b94 1px solid; WIDTH: 11px; CURSOR: pointer; BOTTOM: 0px; PADDING-TOP: 0px; BACKGROUND-REPEAT: no-repeat; POSITION: absolute; TOP: 0px; HEIGHT: 22px; BACKGROUND-COLOR: #346b94
+}
+A.src_scope_dropdown:hover {
+	BACKGROUND-POSITION: -60px -30px
+}
+SPAN.src_side {
+	DISPLAY: inline-block; PADDING-LEFT: 5px; FONT-SIZE: 1px; VERTICAL-ALIGN: top; POSITION: relative
+}
+INPUT.src_btn-web {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-TOP-STYLE: none; PADDING-TOP: 2px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; HEIGHT: 20px; BORDER-BOTTOM-STYLE: none
+}
+SPAN.src_dropdown_menu {
+	BORDER-RIGHT: #346b94 1px solid; BORDER-TOP: #346b94 1px solid; DISPLAY: none; BORDER-LEFT: #346b94 1px solid; BORDER-BOTTOM: #346b94 1px solid; POSITION: absolute; BACKGROUND-COLOR: #fff; TEXT-ALIGN: left
+}
+SPAN.src_dropdown_menu UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 4px 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+SPAN.src_dropdown_menu UL LI {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT: #fff 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #fff 1px solid; LIST-STYLE-TYPE: none
+}
+SPAN.src_dropdown_menu A {
+	PADDING-RIGHT: 32px; DISPLAY: block; PADDING-LEFT: 23px; PADDING-BOTTOM: 6px; MARGIN: 0px; CURSOR: pointer; COLOR: #1b4b6e; BORDER-TOP-STYLE: none; PADDING-TOP: 6px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+SPAN.src_dropdown_menu A:hover {
+	BACKGROUND-COLOR: #e5e5e5; TEXT-DECORATION: none
+}
+SPAN.src_dropdown_menu A.src_menu_selected {
+	BACKGROUND-POSITION: 9px 10px; FONT-WEIGHT: bold; BACKGROUND-REPEAT: no-repeat
+}
+
+UNKNOWN {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomFeaturePanel/FeatArea_BG_1panel_ltr.png); BACKGROUND-REPEAT: no-repeat
+}
+.mscomFeaturePanel .mscomFPFullContent {
+	POSITION: absolute; TOP: 1px
+}
+UNKNOWN {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomFeaturePanel/FeatArea_BG_3panel_ltr.png); BACKGROUND-REPEAT: no-repeat
+}
+.mscomFeaturePanel .mscomFPHalfContent {
+	LEFT: 0px; POSITION: absolute; TOP: 1px
+}
+.mscomFeaturePanel .mscomFPHalfQPTop {
+	RIGHT: 6px; POSITION: absolute; TOP: 1px
+}
+.mscomFeaturePanel .mscomFPHalfQPBottom {
+	RIGHT: 6px; POSITION: absolute; TOP: 121px
+}
+.mscomFPFull {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomFeaturePanel/FeatArea_BG_1panel_ltr.png',sizingMethod='crop'); BACKGROUND-REPEAT: no-repeat
+}
+.mscomFPHalf {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomFeaturePanel/FeatArea_BG_3panel_ltr.png',sizingMethod='crop'); BACKGROUND-REPEAT: no-repeat
+}
+DIV.h15-groups {
+	MARGIN-BOTTOM: 8px
+}
+DIV.h15-groups TABLE {
+	MARGIN: 0px auto; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: #ccc
+}
+DIV.h15-groups TABLE TD.h15-group-l {
+	WIDTH: 0px
+}
+DIV.h15-groups TABLE TD.h15-group-r {
+	WIDTH: 0px
+}
+DIV.h15-groups TABLE TD.h15-group-l {
+	BORDER-LEFT: #547f9a 1px solid; BORDER-RIGHT-STYLE: none
+}
+DIV.h15-groups TABLE TD.h15-group-r {
+	BORDER-RIGHT: #547f9a 1px solid; BORDER-LEFT-STYLE: none
+}
+DIV.h15-groups TABLE TD {
+	BORDER-RIGHT: #a6a6a6 1px dotted; BORDER-TOP: #739cb5 1px solid; BACKGROUND: url(http://i3.microsoft.com/zh/shared/templates/components/cspMscomMasterNavigation/m.m.nav.png) #fff repeat-x 0% 100%; VERTICAL-ALIGN: top; BORDER-BOTTOM: #5f88a2 1px solid; BORDER-LEFT-STYLE: none
+}
+DIV.h15-groups TABLE TD {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/templates/components/cspMscomMasterNavigation/m.m.nav.jpg)
+}
+DIV.h15-groups TABLE TD.h15-no-border {
+	BORDER-RIGHT-STYLE: none
+}
+DIV.h15-groups TABLE TD A.h15-group {
+	PADDING-RIGHT: 5px; DISPLAY: block; PADDING-LEFT: 50px; PADDING-BOTTOM: 15px; VERTICAL-ALIGN: bottom; PADDING-TOP: 15px; HEIGHT: 100%; vertical-align: middle;align:center
+}
+DIV.h15-groups TABLE TD A.h15-group:link {
+	COLOR: #333
+}
+DIV.h15-groups TABLE TD A.h15-group:visited {
+	COLOR: #333
+}
+DIV.h15-groups TABLE TD A.h15-group:hover {
+	COLOR: #000
+}
+DIV.h15-groups TABLE TD A.h15-group:active {
+	COLOR: #000
+}
+DIV.h15-groups TABLE TD.h15-selected {
+	BACKGROUND-IMAGE: none
+}
+DIV.h15-menu-container {
+	Z-INDEX: 1; POSITION: relative
+}
+DIV.h15-menu-inner {
+	BORDER-RIGHT: #444 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #444 1px; PADDING-LEFT: 10px; VISIBILITY: hidden; PADDING-BOTTOM: 0px; OVERFLOW: auto; BORDER-LEFT: #444 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #444 1px solid; POSITION: absolute; BACKGROUND-COLOR: #fff; min-width: 200px; max-height: 350px
+}
+DIV.h15-menu-inner {
+	MARGIN-LEFT: -1px
+}
+UL.h15-links {
+	LIST-STYLE-IMAGE: url(http://i3.microsoft.com/zh/shared/templates/components/cspMscomMasterNavigation/bullet.png); MARGIN-LEFT: 1.5em
+}
+A.h15-link {
+	COLOR: #00629d
+}
+DIV.h15-column {
+	PADDING-BOTTOM: 10px; WIDTH: 190px; POSITION: absolute
+}
+DIV.h15-m1 {
+	LEFT: 10px
+}
+DIV.h15-m2 {
+	LEFT: 210px
+}
+DIV.h15-m3 {
+	LEFT: 410px
+}
+DIV.h15-m4 {
+	LEFT: 610px
+}
+DIV.h15-dotted {
+	BORDER-RIGHT: #628cc6 1px dotted
+}
+DIV.h15-menu {
+	MARGIN-TOP: 10px
+}
+H6.h15-menu-header {
+	FONT-WEIGHT: bold; FONT-SIZE: 100%
+}
+DIV.h15-layout-container {
+	LEFT: 0px; VISIBILITY: hidden; WIDTH: 190px; POSITION: absolute
+}
+DIV.h15-groups TD.h15-group-l {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i3.microsoft.com/zh/shared/templates/components/cspMscomMasterNavigation/m.l.nav.png',sizingMethod='scale'); BACKGROUND-IMAGE: none
+}
+BODY.rtl DIV.h15-groups TD.h15-group-r {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i3.microsoft.com/zh/shared/templates/components/cspMscomMasterNavigation/m.l.nav.png',sizingMethod='scale'); BACKGROUND-IMAGE: none
+}
+DIV.h15-groups TD.h15-group-r {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i3.microsoft.com/zh/shared/templates/components/cspMscomMasterNavigation/m.r.nav.png',sizingMethod='scale'); BACKGROUND-IMAGE: none
+}
+BODY.rtl DIV.h15-groups TD.h15-group-l {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i3.microsoft.com/zh/shared/templates/components/cspMscomMasterNavigation/m.r.nav.png',sizingMethod='scale'); BACKGROUND-IMAGE: none
+}
+DIV.h15-groups TD.h15-group {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/templates/components/cspMscomMasterNavigation/m.m.nav.jpg)
+}
+DIV.h15-subgroup-links {
+	HEIGHT: 500px
+}
+DIV.nbd_newsBand {
+	MARGIN: 8px auto 12px
+}
+DIV.nbd_bandContainer {
+	BACKGROUND-COLOR: #000
+}
+SPAN.nbd_corner_R SPAN {
+	BACKGROUND-COLOR: #000
+}
+UL.nbd_menu {
+	BACKGROUND-COLOR: #000
+}
+DIV.nbd_bandWrapper {
+	OVERFLOW: hidden; POSITION: relative
+}
+DIV.nbd_bandContainer {
+	BORDER-RIGHT: #fff 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #fff 1px solid; PADDING-LEFT: 8px; MARGIN-BOTTOM: 4px; PADDING-BOTTOM: 6px; OVERFLOW: hidden; BORDER-LEFT: #fff 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #fff 1px solid; POSITION: relative
+}
+SPAN.nbd_heading {
+	PADDING-RIGHT: 20px; FONT-WEIGHT: bold; FLOAT: left; COLOR: #fff; LINE-HEIGHT: 1.2
+}
+SPAN.nbd_basic {
+	COLOR: #fff
+}
+SPAN.nbd_red {
+	COLOR: #ffb056
+}
+SPAN.nbd_green {
+	COLOR: #96ff68
+}
+SPAN.nbd_blue {
+	COLOR: #62a1ff
+}
+DIV.nbd_headline {
+	POSITION: relative
+}
+DIV.nbd_headline DIV {
+	OVERFLOW: hidden; POSITION: relative
+}
+BODY.rtl DIV.nbd_headline DIV {
+	DIRECTION: ltr
+}
+DIV.nbd_headline DIV SPAN {
+	BORDER-RIGHT: #000 1px solid; DISPLAY: block
+}
+BODY.rtl DIV.nbd_headline DIV SPAN {
+	OVERFLOW-X: hidden; DIRECTION: rtl; WHITE-SPACE: nowrap
+}
+DIV.nbd_headline A {
+	LINE-HEIGHT: 1.2; WHITE-SPACE: nowrap
+}
+BODY.rtl DIV.nbd_headline A {
+	DIRECTION: rtl
+}
+A.nbd_arrow {
+	BACKGROUND-POSITION: 0px -20px; DISPLAY: none; RIGHT: 7px; WIDTH: 19px; TOP: 0.6em; HEIGHT: 10px
+}
+A.nbd_arrow:hover {
+	BACKGROUND-POSITION: 0px -30px
+}
+A.nbd_arrow {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomNewsBand/NB_ltr.4.png); OVERFLOW: hidden; BACKGROUND-REPEAT: no-repeat; POSITION: absolute
+}
+SPAN.nbd_corner_TL {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomNewsBand/NB_ltr.4.png); OVERFLOW: hidden; BACKGROUND-REPEAT: no-repeat; POSITION: absolute
+}
+SPAN.nbd_corner_TR {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomNewsBand/NB_ltr.4.png); OVERFLOW: hidden; BACKGROUND-REPEAT: no-repeat; POSITION: absolute
+}
+SPAN.nbd_corner_BL {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomNewsBand/NB_ltr.4.png); OVERFLOW: hidden; BACKGROUND-REPEAT: no-repeat; POSITION: absolute
+}
+SPAN.nbd_corner_BR {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomNewsBand/NB_ltr.4.png); OVERFLOW: hidden; BACKGROUND-REPEAT: no-repeat; POSITION: absolute
+}
+SPAN.nbd_corner_B {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomNewsBand/NB_ltr.4.png); OVERFLOW: hidden; BACKGROUND-REPEAT: no-repeat; POSITION: absolute
+}
+SPAN.nbd_corner_R {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspMscomNewsBand/NB_ltr.4.png); OVERFLOW: hidden; BACKGROUND-REPEAT: no-repeat; POSITION: absolute
+}
+SPAN.nbd_corner_TL {
+	BACKGROUND-POSITION: 0px 0px; LEFT: 0px; WIDTH: 10px; TOP: 0px; HEIGHT: 8px
+}
+SPAN.nbd_corner_TR {
+	BACKGROUND-POSITION: -10px 0px; RIGHT: 0px; WIDTH: 10px; TOP: 0px; HEIGHT: 8px
+}
+SPAN.nbd_corner_B {
+	BACKGROUND-POSITION: 0px -40px; LEFT: 0px; WIDTH: 100%; BOTTOM: 0px; BACKGROUND-REPEAT: repeat-x; HEIGHT: 5px
+}
+SPAN.nbd_corner_BL {
+	BACKGROUND-POSITION: 0px -8px; LEFT: 0px; WIDTH: 10px; BOTTOM: 0px; HEIGHT: 12px
+}
+SPAN.nbd_corner_BR {
+	BACKGROUND-POSITION: -10px -8px; RIGHT: 0px; WIDTH: 10px; BOTTOM: 0px; HEIGHT: 12px
+}
+SPAN.nbd_corner_R {
+	BACKGROUND-POSITION: -20px 0px; RIGHT: 0px; WIDTH: 60px; BACKGROUND-REPEAT: repeat-y; TOP: 0px; HEIGHT: 40px
+}
+BODY.rtl SPAN.nbd_corner_R {
+	BACKGROUND-POSITION: 30px 0px
+}
+SPAN.nbd_corner_R SPAN {
+	RIGHT: 0px; WIDTH: 50px; POSITION: absolute; TOP: 0px; HEIGHT: 40px
+}
+DIV.nbd_menuOverflowWrapper {
+	DISPLAY: none; OVERFLOW: visible; HEIGHT: 0px
+}
+DIV.nbd_menuWrapper {
+	BORDER-RIGHT: #fff 1px solid; BORDER-TOP: #fff 1px; Z-INDEX: 99; BORDER-LEFT: #fff 1px solid; WIDTH: 600px; MARGIN-RIGHT: 5px; BORDER-BOTTOM: #fff 1px solid; POSITION: relative; TOP: -5px
+}
+UL.nbd_menu {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+UL.nbd_menu LI {
+	PADDING-RIGHT: 0px; BORDER-TOP: #666 1px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 6px; PADDING-TOP: 5px
+}
+UL.nbd_menu A {
+	
+}
+DIV.nbd_newsBand A {
+	COLOR: #ccc; TEXT-DECORATION: none
+}
+DIV.nbd_newsBand A:hover {
+	COLOR: #fff; TEXT-DECORATION: underline
+}
+BODY.rtl DIV.nbd_newsBand {
+	DIRECTION: ltr
+}
+DIV.nbd_bandContainer {
+	HEIGHT: 1.2em
+}
+BODY.rtl DIV.nbd_bandContainer {
+	DIRECTION: rtl
+}
+SPAN.nbd_heading {
+	FLOAT: none
+}
+BODY.rtl SPAN.nbd_heading {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+DIV.nbd_headline {
+	DISPLAY: inline; POSITION: absolute
+}
+BODY.rtl DIV.nbd_headline {
+	MARGIN-RIGHT: 20px
+}
+DIV.nbd_headline DIV {
+	DISPLAY: inline; POSITION: static
+}
+BODY.rtl DIV.nbd_headline DIV {
+	DIRECTION: rtl
+}
+DIV.nbd_headline DIV SPAN {
+	BORDER-RIGHT-WIDTH: 0px
+}
+BODY.rtl DIV.nbd_headline DIV SPAN {
+	OVERFLOW-X: visible; WHITE-SPACE: normal
+}
+A.nbd_arrow {
+	FONT-SIZE: 0px; RIGHT: 8px; LINE-HEIGHT: 2px; TOP: 7px
+}
+SPAN.nbd_corner_TL {
+	DISPLAY: none
+}
+SPAN.nbd_corner_TR {
+	DISPLAY: none
+}
+SPAN.nbd_corner_B {
+	DISPLAY: none
+}
+SPAN.nbd_corner_BL {
+	DISPLAY: none
+}
+SPAN.nbd_corner_BR {
+	DISPLAY: none
+}
+SPAN.nbd_corner_R {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr=#00000000,EndColorStr=#FF000000); BACKGROUND-IMAGE: none
+}
+BODY.rtl SPAN.nbd_corner_R {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=1,StartColorStr=#FF000000,EndColorStr=#00000000)
+}
+SPAN.nbd_corner_R SPAN {
+	DISPLAY: none
+}
+DIV.nbd_menuOverflowWrapper {
+	Z-INDEX: 99; POSITION: relative
+}
+BODY.rtl DIV.nbd_menuOverflowWrapper {
+	DIRECTION: rtl
+}
+DIV.nbd_menuWrapper {
+	POSITION: absolute; TOP: -5px
+}
+.vrtc_verticalTabs {
+	MIN-HEIGHT: 328px; WIDTH: 690px; PADDING-TOP: 11px
+}
+UNKNOWN {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspVerticalRolloverTab/TabModule_BG_content_ltr.png); BACKGROUND-REPEAT: no-repeat
+}
+.vrtc_verticalTabs A:link {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vrtc_verticalTabs A:visited {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vrtc_verticalTabs A:hover {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vrtc_verticalTabs A:active {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vt_lay60 A:link {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vt_lay60 A:visited {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vt_lay60 A:hover {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vt_lay60 A:active {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vt_lay50_near A:link {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vt_lay50_near A:visited {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vt_lay50_near A:hover {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vt_lay50_near A:active {
+	COLOR: #4d7cc1; POSITION: relative
+}
+.vt_lay40 A:link {
+	COLOR: #4e7de2; POSITION: relative
+}
+.vt_lay40 A:visited {
+	COLOR: #4e7de2; POSITION: relative
+}
+.vt_lay40 A:hover {
+	COLOR: #4e7de2; POSITION: relative
+}
+.vt_lay40 A:active {
+	COLOR: #4e7de2; POSITION: relative
+}
+.vt_lay50_far A:link {
+	COLOR: #4e7de2; POSITION: relative
+}
+.vt_lay50_far A:visited {
+	COLOR: #4e7de2; POSITION: relative
+}
+.vt_lay50_far A:hover {
+	COLOR: #4e7de2; POSITION: relative
+}
+.vt_lay50_far A:active {
+	COLOR: #4e7de2; POSITION: relative
+}
+.vrtc_cf {
+	MIN-HEIGHT: 1%
+}
+.vrtc_cf:unknown {
+	CLEAR: both; DISPLAY: block; VISIBILITY: hidden; HEIGHT: 0px; content: "."
+}
+.vrtc_ad {
+	MARGIN-TOP: 31px; LEFT: -8px; POSITION: relative
+}
+.vrtc_ad DIV.cspAdControl {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.vrtc_ad DIV.cspAdControl A {
+	POSITION: static
+}
+.vrtc_ad LI {
+	LIST-STYLE-TYPE: none
+}
+.vrtc_ad_hidden {
+	DISPLAY: none
+}
+.vrtc_tabs {
+	DISPLAY: inline; FLOAT: left; PADDING-BOTTOM: 30px; PADDING-TOP: 10px; POSITION: relative; TEXT-ALIGN: right
+}
+.vrtc_tab_headings {
+	PADDING-LEFT: 0px; MARGIN-LEFT: 0px; WIDTH: 100%
+}
+.vrtc_tab_headings LI {
+	PADDING-RIGHT: 18px; PADDING-LEFT: 40px; FONT-SIZE: 1em; MARGIN-BOTTOM: 0px; PADDING-BOTTOM: 9px; CURSOR: default; DIRECTION: ltr; PADDING-TOP: 9px; LIST-STYLE-TYPE: none
+}
+.vrtc_tab_headings LI A:link {
+	COLOR: #404040; DIRECTION: ltr; TEXT-DECORATION: none
+}
+.vrtc_tabs LI A:visited {
+	COLOR: #404040; DIRECTION: ltr; TEXT-DECORATION: none
+}
+.vrtc_tabs LI A:active {
+	COLOR: #404040; DIRECTION: ltr; TEXT-DECORATION: none
+}
+.vrtc_tab_headings LI.vrtc_tabActive A:link {
+	FONT-WEIGHT: bold; COLOR: #007734
+}
+.vrtc_tabs LI.vrtc_tabActive A:hover {
+	FONT-WEIGHT: bold; COLOR: #007734
+}
+.vrtc_tabs LI.vrtc_tabActive A:active {
+	FONT-WEIGHT: bold; COLOR: #007734
+}
+.vrtc_tabs LI.vrtc_tabActive A:visited {
+	FONT-WEIGHT: bold; COLOR: #007734
+}
+.vrtc_tab_headings LI.vrtc_tabActive {
+	BACKGROUND-POSITION: right top; BACKGROUND-REPEAT: no-repeat; ZOOM: 1
+}
+UNKNOWN {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/Templates/Components/cspVerticalRolloverTab/TabModule_BG_navlist_ltr.png); BACKGROUND-REPEAT: no-repeat
+}
+.vrtc_ulTabs {
+	DISPLAY: block; WIDTH: 190px
+}
+.vrtc_tabHiddenPanel {
+	DISPLAY: none
+}
+.vrtc_tabContentPanel {
+	DISPLAY: inline; PADDING-LEFT: 8px; FLOAT: left; WIDTH: 490px; LINE-HEIGHT: 1.4em
+}
+.vrtc_verticalTabs {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i3.microsoft.com/zh/shared/Templates/Components/cspVerticalRolloverTab/TabModule_BG_content_ltr.png',sizingMethod='crop'); HEIGHT: 328px
+}
+.vrtc_tabs LI.vrtc_tabActive {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://i3.microsoft.com/zh/shared/Templates/Components/cspVerticalRolloverTab/TabModule_BG_navlist_ltr.png',sizingMethod='crop')
+}
+BODY.rtl .vrtc_tabContentPanel {
+	DIRECTION: ltr; TEXT-ALIGN: right
+}
+.cspAdControl IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.vt_lay60 {
+	CLEAR: left; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; WIDTH: 260px; WORD-WRAP: break-word
+}
+.vt_lay40 {
+	CLEAR: right; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 30px; WIDTH: 190px; WORD-WRAP: break-word
+}
+.vt_lay50_near {
+	CLEAR: left; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 10px; WIDTH: 225px; WORD-WRAP: break-word
+}
+.vt_lay50_far {
+	CLEAR: right; DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 30px; WIDTH: 225px; WORD-WRAP: break-word
+}
+.vt_layfull {
+	CLEAR: both; FLOAT: none; MARGIN-LEFT: 10px; WORD-WRAP: break-word
+}
+.vt_col_cntnr {
+	CLEAR: both; HEIGHT: 1%
+}
+.vt_col_cntnr .vt_heading {
+	FONT-SIZE: 145%; MARGIN-BOTTOM: 8px; COLOR: #404040
+}
+.vt_col_cntnr .vt_image {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.vt_col_cntnr .vt_lay60 .vt_image {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; MARGIN-BOTTOM: 15px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.vt_col_cntnr .vt_layfull .vt_image {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.vt_col_cntnr .vt_image A {
+	FONT-WEIGHT: bold
+}
+.vt_col_cntnr .vt_headline .vt_imgBorder {
+	DISPLAY: inline; FLOAT: left; MARGIN-RIGHT: 8px
+}
+UNKNOWN {
+	DIRECTION: ltr
+}
+.vt_col_cntnr .vt_imgBorder A {
+	POSITION: static
+}
+.vt_col_cntnr .vt_layfull .vt_headline {
+	MARGIN-BOTTOM: 23px
+}
+.vt_cf {
+	MIN-HEIGHT: 1%
+}
+.vt_col_cntnr .vt_desc {
+	MARGIN-BOTTOM: 15px
+}
+.vt_col_cntnr .vt_desc A {
+	FONT-WEIGHT: bold
+}
+.vt_bulletedlist {
+	CLEAR: both
+}
+BODY.rtl .vt_bulletedlist {
+	MARGIN-RIGHT: 1.6em
+}
+.vt_col_cntnr .vt_linklist {
+	PADDING-LEFT: 25px; MARGIN-BOTTOM: 26px; COLOR: #4d7cc1
+}
+BODY.rtl .vt_linklist {
+	PADDING-LEFT: 0px; LIST-STYLE-TYPE: none
+}
+.vt_linklist LI {
+	MARGIN-BOTTOM: 7px; LINE-HEIGHT: 127%
+}
+UNKNOWN {
+	WIDTH: 100%
+}
+UNKNOWN {
+	POSITION: static
+}
+.vt_col_cntnr LI.vt_desc {
+	MARGIN-BOTTOM: 15px
+}
+.vt_col_cntnr LI SPAN {
+	COLOR: #000
+}
+.vt_tabPanel {
+	WIDTH: 490px; PADDING-TOP: 10px; POSITION: relative
+}
+.featureItem {
+	LIST-STYLE-TYPE: none
+}
+.featureItem DIV.vt_imgBorder {
+	MARGIN-LEFT: -25px
+}
+UL.secondary_links {
+	CLEAR: both; MARGIN-TOP: 2px; LIST-STYLE-IMAGE: url(http://i3.microsoft.com/zh/shared/templates/components/cspMscomVerticalTab/Sprite_Content-1.1_left.png); MARGIN-LEFT: 1.5em; DIRECTION: ltr! important
+}
+UL.secondary_links LI {
+	MARGIN-BOTTOM: 0px
+}
+UL.secondary_links LI A {
+	FONT-WEIGHT: normal! important; VERTICAL-ALIGN: 5px; POSITION: static! important
+}
+DIV.sg-popup {
+	BORDER-RIGHT: #378ad3 1px solid; BACKGROUND-POSITION: 50% bottom; BORDER-TOP: #378ad3 1px solid; DISPLAY: none; BORDER-LEFT: #378ad3 1px solid; WIDTH: 500px; BORDER-BOTTOM: #378ad3 1px solid; BACKGROUND-REPEAT: no-repeat; POSITION: absolute; TOP: 20px; BACKGROUND-COLOR: #fff
+}
+DIV.sg-popup-image {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/templates/components/cspSilvergate/sl.ltr.jpg)
+}
+BODY.rtl DIV.sg-popup-image {
+	BACKGROUND-IMAGE: url(http://i3.microsoft.com/zh/shared/templates/components/cspSilvergate/sl.rtl.jpg)
+}
+DIV.sg-background {
+	WIDTH: 100%; POSITION: absolute; HEIGHT: 100%; BACKGROUND-COLOR: #000; opacity: 0.25
+}
+DIV.sg-background {
+	FILTER: progid:DXImageTransform.Microsoft.Alpha(opacity=25); ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=25)"
+}
+DIV.sg-staging {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 20px; MARGIN: 1px; PADDING-TOP: 20px; BACKGROUND-COLOR: #378ad3
+}
+DIV.sg-staging {
+	FILTER: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ff378ad3',GradientType=1,EndColorStr='#ffadd8ee'); WIDTH: 498px; ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr=#ff378ad3,GradientType=1,EndColorStr=#ffadd8ee)"
+}
+DIV.sg-logo {
+	MARGIN-LEFT: 40px
+}
+DIV.sg-commands {
+	MARGIN: 30px 0px 130px
+}
+INPUT.sg-install {
+	DISPLAY: block; FONT-SIZE: 1.2em; MARGIN: 0px auto; COLOR: #000; FONT-FAMILY: Tahoma,Verdana,Segoe,sans-serif
+}
+INPUT.sg-no-thanks {
+	DISPLAY: block; FONT-SIZE: 0.8em; MARGIN: 20px auto 0px; COLOR: #222; FONT-FAMILY: Tahoma,Verdana,Segoe,sans-serif
+}
+
+
+
+
+
+
+
+
+
+DIV.lowerContent {
+	MARGIN-LEFT: 105px; MARGIN-RIGHT: 109px;MARGIN-BOTTOM: 20px;MARGIN-TOP: 10px
+}
+.dsp-downloads-header {
+	MIN-HEIGHT: 40px; BACKGROUND-COLOR: #506066;color: #FFFFFF;
+}
+DIV.leftCol {
+	MARGIN-TOP: 5px; FLOAT: left; WIDTH: 280px; POSITION: relative
+}
+.dsp-tpdl {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 398px; PADDING-TOP: 0px; POSITION: relative
+}
+.dsp-tpdl .headc {
+	MARGIN-LEFT: 14px; PADDING-TOP: 5px; POSITION: relative
+}
+.dsp-tpdl .headc_right {
+	FLOAT: right; MARGIN-RIGHT: 5px; WHITE-SPACE: nowrap
+}
+.dsp-tpdl .headc_right-btnGo {
+	DISPLAY: inline; PADDING-BOTTOM: 2.6em; POSITION: static; HEIGHT: 1.7em
+}
+.dsp-tpdl .headc_right-selectCatg {
+	MARGIN-TOP: 1px; DISPLAY: inline; POSITION: static; HEIGHT: 1.7em
+}
+.dsp-clear {
+	CLEAR: both
+}
+.bullet {
+	MARGIN-TOP: -2px; DISPLAY: block; BACKGROUND: url(http://i3.microsoft.com/downloads/zh-cn/shared/templates/components/dsppageheader/dlc_mixed.png) no-repeat -50px -85px; LEFT: 8px; WIDTH: 5px; POSITION: absolute; TOP: 50%; HEIGHT: 5px;
+}
+.dsp-downloads LI {
+	DISPLAY: block; COLOR: #4e7dc2; LIST-STYLE-TYPE: none; POSITION: relative; HEIGHT: 100%; BACKGROUND-COLOR: #f5f8fb
+}
+.dsp-downloads LI.even {
+	BORDER-LEFT-COLOR: #ecf0f2; BACKGROUND-COLOR: #ecf0f2
+}
+
+.dsp-downloads LI.evenbottom {
+	BORDER-LEFT-COLOR: #ecf0f2; BACKGROUND-COLOR: #ecf0f2;  MARGIN-BOTTOM: 15px;
+}
+.dsp-downloads LI A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 2px; PADDING-TOP: 2px
+}
+.dsp-downloads LI SPAN {
+	PADDING-RIGHT: 0px; DISPLAY: inline-block; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.3em; MARGIN-LEFT: 23px; PADDING-TOP: 0.3em
+}
+
+
+
+
+
+
+DIV.rightCol {
+	FLOAT: right; MARGIN-LEFT: 63px; WIDTH: 262px; POSITION: relative;MARGIN-TOP: 5px;
+}
+DIV.rightCol {
+	MARGIN-LEFT: 20px
+}
+DIV.downloadResources {
+	CLEAR: both; FLOAT: right; WIDTH: 250px; POSITION: relative
+}
+
+.dsp-dcr-panel {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 10px 0px 0px; WIDTH: 250px; PADDING-TOP: 0px; POSITION: relative
+}
+.dsp-dcr-panel1{
+ MARGIN-BOTTOM: 15px;
+}
+.dsp-dcr-panel .container {
+	MARGIN-TOP: 5px; FLOAT: left; MARGIN-BOTTOM: 12px;
+}
+.dsp-dcr-panel .detail {
+	MIN-HEIGHT: 1px; FLOAT: left; WIDTH: 169px
+}
+.dsp-dcr-panel .hr {
+	CLEAR: both; BORDER-TOP: #a7a6a4 1px dotted; FONT-SIZE: 1%; WIDTH: 250px; HEIGHT: 1px
+}
+.dsp-dcr-panel .container {
+	MARGIN-TOP: 5px; FLOAT: left; MARGIN-BOTTOM: 12px
+}
+DIV.msnads {
+	CLEAR: right; PADDING-RIGHT: 35px; PADDING-LEFT: 35px; PADDING-BOTTOM: 0px; WIDTH: 180px; PADDING-TOP: 49px; POSITION: relative; HEIGHT: 150px
+}
+.cspAdControl IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+
+
+.c_contentfont{
+color:#383838
+}
+.c_middletab_lefth{
+ MARGIN-BOTTOM: 15px;MARGIN-LEFT: 10px;MARGIN-RIGHT: 20px;MARGIN-TOP: 0px;color:#383838
+}
+.c_middletab_righth{
+ MARGIN-BOTTOM: 15px;MARGIN-LEFT: 0px;MARGIN-RIGHT: 20px;MARGIN-TOP: 0px;color:#383838
+}
+.c_middletab_left{
+ MARGIN-BOTTOM: 15px;MARGIN-LEFT: 10px;MARGIN-RIGHT: 20px;MARGIN-TOP: 0px;color:#383838
+}
+.c_middletab_right{
+ MARGIN-BOTTOM: 15px;MARGIN-LEFT: 0px;MARGIN-RIGHT: 20px;MARGIN-TOP: 0px;color:#383838
+}
+.c_middletab2{
+MARGIN-LEFT: 10px;MARGIN-TOP: 0px;
+}

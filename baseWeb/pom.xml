@@ -71,6 +71,8 @@
         <json_simple.version>1.1</json_simple.version>
 
         <commonio.version>2.0.1</commonio.version>
+
+        <urlrewritefilter.version>4.0.3</urlrewritefilter.version>
     </properties>
 
 
@@ -232,6 +234,12 @@
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commonio.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.tuckey</groupId>
+                <artifactId>urlrewritefilter</artifactId>
+                <version>${urlrewritefilter.version}</version>
             </dependency>
 
         </dependencies>

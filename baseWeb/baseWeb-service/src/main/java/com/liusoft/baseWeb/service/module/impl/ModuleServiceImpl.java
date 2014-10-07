@@ -59,7 +59,7 @@ public class ModuleServiceImpl implements ModuleService {
 	
 	public Module getModuleById(Integer id) {
 		
-		return null;
+		return moduleDao.getModuleById(id);
 	}
 	
 	public Result getModuleByPage(PageQuery pageQuery) {

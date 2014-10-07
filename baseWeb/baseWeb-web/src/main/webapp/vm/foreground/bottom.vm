@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=zh dir=ltr xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>-bottom</TITLE>
+<META http-equiv=X-UA-Compatible content=IE=EmulateIE7>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<LINK href="/misc/css/css.css" type=text/css rel=stylesheet>
+<LINK href="/misc/css/css(1).css" type=text/css rel=stylesheet>
+<LINK href="/misc/css/css(2).css" type=text/css rel=stylesheet>
+<LINK href="/misc/css/css(3).css" type=text/css rel=stylesheet>
+<BODY class=ltr>
+<DIV class=h15-bottom>
+
+
+
+
+<DIV style="CLEAR: both"></DIV>
+<DIV class="dsp-content-bottom1"></DIV><DIV class=h15-footer id=zh-cn-footer>
+<DIV class=h15-site-links>四川金凌峰装饰工程有限公司
+<A  style="color:#ffffff" href="/login.html" target="_blank">管理入口</A>
+</DIV>
+
+<DIV><INPUT id=__EVENTTARGET type=hidden name=__EVENTTARGET><INPUT id=__EVENTARGUMENT type=hidden name=__EVENTARGUMENT><INPUT id=__EVENTVALIDATION type=hidden value=/wEWBALCxMfqDAL73tiwAwLx4qxVAs2s4aQJeGdv4O7OGhFpO9WB09w7TdcSqSo= name=__EVENTVALIDATION></DIV>
+<SCRIPT type="text/javascript">//<![CDATA[
+var theForm = document.forms['aspnetForm'];if (!theForm) {    theForm = document.aspnetForm;}function __doPostBack(eventTarget, eventArgument) {    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {        theForm.__EVENTTARGET.value = eventTarget;        theForm.__EVENTARGUMENT.value = eventArgument;        theForm.submit();    }}
+//]]>
+</SCRIPT>
+
+
+
+
+<NOSCRIPT><IMG id=DCSIMG height=1 alt="" src="images/njs.gif" 
+width=1></NOSCRIPT>
+<SCRIPT type=text/javascript>        $(window).load(function () {            if (window.dcsRun && (!window.$$SG || !$$SG.get_IsDisplayed())) {                dcsRun();            }            var fn = function () { wtSetCId($(this).attr("cid"), $(this)); };            if (window.addEventListener)                $("a[cid],area[cid]").mousedown(fn);            else                $("a[cid],area[cid]").click(fn);        });    </SCRIPT>
+
+ <NOSCRIPT><IMG height=1 alt="" src="images/trans_pixel.gif"
+width=1></NOSCRIPT></BODY></HTML>
+

@@ -78,8 +78,8 @@
         <include refid="common-sql" />
 	</select>
 	
-	<select id="getById" resultMap="articleMap" parameterType="java.lang.String">
-		SELECT <include refid="fields" /> FROM t_article WHERE id = #{id}
+	<select id="getById" resultMap="articleInfoMap" parameterType="java.lang.String">
+		SELECT <include refid="fields" />,t_module.name as module_name FROM t_article,t_module WHERE t_article.id = #{id}  and t_article.module_id=t_module.id
 	</select>
 	
 	<select id="getByPage" resultMap="articleInfoMap" parameterType="java.util.HashMap">

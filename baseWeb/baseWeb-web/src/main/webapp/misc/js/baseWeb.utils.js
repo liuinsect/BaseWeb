@@ -31,20 +31,26 @@
                 return;
             }
             if (!dt) dt = 'json';
-            showRetrieveProgressBar(true);
+            if( typeof showRetrieveProgressBar != "undefined"){
+                showRetrieveProgressBar(true);
+            }
             $.ajax({
                 url: url,
                 dataType: dt,
                 type: "POST",
                 data: param,
                 success: function(data, textStatus) {
-                    showRetrieveProgressBar(false);
+                    if( typeof showRetrieveProgressBar != "undefined"){
+                        showRetrieveProgressBar(false);
+                    }
                     gUtils.fProcessResult(data, function() {
                         scallback.call(this,data, textStatus);
                     });
                 },
                 error: function(xhr, status, errMsg) {
-                    showRetrieveProgressBar(false);
+                    if( typeof showRetrieveProgressBar != "undefined"){
+                        showRetrieveProgressBar(false);
+                    }
                     if (ecallback) {
                         ecallback.call(this, xhr, status, errMsg);
                     } else {

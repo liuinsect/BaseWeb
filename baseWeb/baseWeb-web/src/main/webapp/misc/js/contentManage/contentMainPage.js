@@ -445,11 +445,11 @@ function pubArticle() {
 
     var content = html_element.innerHTML;
 
-    var articleTitle = jQuery('#articleTilte').val();
+    var articleTitle = jQuery("#contentForm").find('#articleTilte').val();
 
-    var articleId = jQuery('#articleId').val();
+    var articleId = jQuery("#contentForm").find('#articleId').val();
 
-    var moduleId = jQuery('#moduleId').val();
+    var moduleId = jQuery("#contentForm").find('#moduleId').val();
 
     var url = jQuery('#contentForm').attr("action");
 

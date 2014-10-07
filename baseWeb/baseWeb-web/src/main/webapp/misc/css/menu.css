@@ -1,0 +1,51 @@
+#jsddm {
+    margin: 0;
+    padding: 0;
+}
+#jsddm li {
+    float: left;
+    font: 12px Tahoma,Arial;
+    list-style: none outside none;
+}
+#jsddm li a {
+    background: none repeat scroll 0 0 #fbfbfb;
+    border-right: 1px solid 84c4e7;
+    color: #000000;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 60px;
+}
+#jsddm li a:hover {
+    background: none repeat scroll 0 0 #84c4e7;
+    color: #ffffff;
+}
+#jsddm li ul {
+    border-top: 1px solid #84c4e7;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+}
+#jsddm li ul li {
+    display: inline;
+    float: none;
+}
+#jsddm li ul li a {
+    background: none repeat scroll 0 0 #84c4e7;
+    color: #ffffff;
+    width: auto;
+}
+#jsddm li ul li a:hover {
+    background: none repeat scroll 0 0 #72A5C5;
+}
+.mainMenu {
+    padding-left: 10%;
+    padding-top: 20px;
+}
+
+

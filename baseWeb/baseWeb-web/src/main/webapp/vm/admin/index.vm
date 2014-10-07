@@ -3,7 +3,7 @@
 
 	<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>山区道路结构与材料重庆市市级重点实验室后台系统登录</title>
+		<title>四川金凌峰装饰工程有限公司后台系统登录</title>
         #include('/admin/common.vm')
 	</head>
 
@@ -29,7 +29,7 @@
 		<div region="center" id="main"
 			style="overflow: hidden; padding: 0px; background-color: #EBF3FD; border: 0px">
 			<div fit="true" title="主界面" id="background_panel">
-				欢迎使用山区道路建设与维护技术重庆市重点实验室后台管理系统
+                四川金凌峰装饰工程有限公司后台系统
 			</div>
 		</div>
 		<!-- 结束 -->

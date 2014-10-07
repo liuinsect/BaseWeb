@@ -1,0 +1,49 @@
+/* common page styles */
+	body
+	{	background: #6595A3;
+		padding: 0 20px}
+
+	.clear
+	{	clear: both;
+		overflow: hidden;
+		height: 0}
+		
+	
+
+	#all
+	{	width: 80%;
+		min-width: 650px;
+		margin: 40px auto 0 auto;
+		background: #FCFFED;
+		padding: 20px 35px}
+
+	h1
+	{	font: 26px tahoma, arial;
+		color: #324143}
+
+	p
+	{	font: 12px tahoma, arial;
+		color: #171F26;
+		margin-bottom: 25px}
+
+	a
+	{	color: #324143}
+
+	#copyright
+	{	width: 80%;
+		min-width: 650px;
+		margin: 0 auto;
+		padding: 20px 35px;
+		background: #B6C28B;
+		font: 12px tahoma, arial;
+		color: #324143}
+
+	#copyright a
+	{	color: #324143}
+
+	#copyright a:hover
+	{	color: #171F26}
+	
+
+	
+	

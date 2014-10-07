@@ -1,0 +1,112 @@
+DIV.h15-header {
+	BORDER-RIGHT: #599cd4 1px solid; 
+	PADDING-RIGHT: 0em; 
+	BORDER-TOP: #599cd4 1px solid; P
+	ADDING-LEFT: 0em; 
+	PADDING-BOTTOM: 0.25em; 
+	MARGIN: 0px auto; 
+	BORDER-LEFT: #599cd4 1px solid; 
+	WIDTH: 932px; 
+	PADDING-TOP: 0.25em; 
+	padding-peft:10px;
+	BORDER-BOTTOM: #599cd4 1px solid; 
+	BACKGROUND-COLOR: #e0eff6; 
+	TEXT-ALIGN: left
+}
+DIV.h15-header-inner {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0px; MARGIN: 0.5em 0px 0.25em
+}
+DIV.h15-header {
+	COLOR: #00629d
+}
+DIV.h15-header A {
+	COLOR: #00629d
+}
+SPAN.h15-pipe {
+	MARGIN: 0px 0.5em
+}
+SPAN.h15-switch {
+	MARGIN-LEFT: 1em
+}
+STRONG.h15-country {
+	MARGIN-LEFT: 1em
+}
+SPAN.h15-switch A {
+	TEXT-DECORATION: none
+}
+SPAN.h15-switch A:visited {
+	TEXT-DECORATION: none
+}
+SPAN.h15-switch A:hover {
+	TEXT-DECORATION: underline
+}
+SPAN.h15-switch A:active {
+	TEXT-DECORATION: underline
+}
+
+IMG#idSI {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; MARGIN-LEFT: 0.25em; VERTICAL-ALIGN: middle; BORDER-RIGHT-WIDTH: 0px
+}
+IMG#idSO {
+	MARGIN-LEFT: 0.25em; VERTICAL-ALIGN: middle
+}
+DIV.h15-marketing {
+	Z-INDEX: 15; LEFT: -926px; POSITION: relative
+}
+BODY.rtl DIV.h15-marketing {
+	LEFT: 0px
+}
+DIV#lspLink {
+	DISPLAY: none; LEFT: 0px; WIDTH: 369px; POSITION: absolute; HEIGHT: 41px; TEXT-ALIGN: left
+}
+DIV#lspLinkContainer {
+	HEIGHT: 100%
+}
+DIV.h15-header-inner DIV#lspLink {
+	TOP: -7px
+}
+DIV#lspLink A:link {
+	LEFT: 35px; FONT-FAMILY: Tahoma,Verdana,Segoe,sans-serif; POSITION: absolute; TOP: 6px; TEXT-DECORATION: none
+}
+DIV#lspLink A:visited {
+	LEFT: 35px; FONT-FAMILY: Tahoma,Verdana,Segoe,sans-serif; POSITION: absolute; TOP: 6px; TEXT-DECORATION: none
+}
+DIV#lspLink A:hover {
+	LEFT: 35px; FONT-FAMILY: Tahoma,Verdana,Segoe,sans-serif; POSITION: absolute; TOP: 6px; TEXT-DECORATION: none
+}
+DIV#lspLink A:active {
+	LEFT: 35px; FONT-FAMILY: Tahoma,Verdana,Segoe,sans-serif; POSITION: absolute; TOP: 6px; TEXT-DECORATION: none
+}
+DIV#lspLink A:link {
+	COLOR: #00629d
+}
+DIV#lspLink A:visited {
+	COLOR: #00629d
+}
+DIV#lspLink A:hover {
+	COLOR: #00629d
+}
+DIV#lspLink A:active {
+	COLOR: #00629d
+}
+DIV#lspLink A:hover {
+	BORDER-BOTTOM: #00629d 1px dotted
+}
+DIV#lspLink A:active {
+	BORDER-BOTTOM: #00629d 1px dotted
+}
+DIV#lspTile {
+	DISPLAY: none; LEFT: 0px; FLOAT: left; WIDTH: 423px; POSITION: absolute; TOP: 0px; HEIGHT: 138px
+}
+DIV#lspTileContainer {
+	HEIGHT: 100%
+}
+DIV.h15-header-inner DIV#lspTile {
+	LEFT: -1px; TOP: -7px
+}
+
+
+
+.articleTitle{
+	padding-left:30px;
+}

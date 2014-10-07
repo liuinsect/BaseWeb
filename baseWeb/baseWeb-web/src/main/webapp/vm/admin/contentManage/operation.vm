@@ -33,6 +33,7 @@
                             </td>
                             <td>
                                 <select id="moduleId" style="width: 110px">
+                                    <option value="" >全部</option>
                                     #foreach($module in $modulelist)
                                         <option value="$module.id" >$module.name</option>
                                     #end

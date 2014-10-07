@@ -69,9 +69,7 @@ public class ArticleServiceImpl implements ArticleService {
     }
 	
 	public List<Article> getListByExample(Article article) {
-		
-		
-		return null;
+		return  articleDao.getListByExample(article);
 	}
 	
 	public Result getArticleById(Integer id) {

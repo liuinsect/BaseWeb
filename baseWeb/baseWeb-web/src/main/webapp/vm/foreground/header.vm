@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=zh dir=ltr xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>header</TITLE>
+<META http-equiv=X-UA-Compatible content=IE=EmulateIE7>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<LINK href="/misc/css/css.css" type=text/css rel=stylesheet>
+<LINK href="/misc/css/css(1).css" type=text/css rel=stylesheet>
+<LINK href="/misc/css/css(2).css" type=text/css rel=stylesheet>
+<LINK href="/misc/css/css(3).css" type=text/css rel=stylesheet>
+
+
+<link href="/misc/css/body.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/misc/css/menu.css" rel="stylesheet" media="screen" type="text/css" />
+
+
+  <script type="text/javascript">
+var timeout         = 500;
+var closetimer		= 0;
+var ddmenuitem      = 0;
+
+function jsddm_open()
+{	jsddm_canceltimer();
+	jsddm_close();
+	ddmenuitem = $(this).find('ul').eq(0).css('visibility', 'visible');}
+
+function jsddm_close()
+{	if(ddmenuitem) ddmenuitem.css('visibility', 'hidden');}
+
+function jsddm_timer()
+{	closetimer = window.setTimeout(jsddm_close, timeout);}
+
+function jsddm_canceltimer()
+{	if(closetimer)
+	{	window.clearTimeout(closetimer);
+		closetimer = null;}}
+
+$(document).ready(function()
+{	$('#jsddm > li').bind('mouseover', jsddm_open);
+	$('#jsddm > li').bind('mouseout',  jsddm_timer);});
+
+document.onclick = jsddm_close;
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+<BODY class=ltr>
+<DIV class=h15-bottom>
+<DIV class=h15-header>
+	<DIV class=h15-header-inner id=zh-cn-header>
+		<SPAN style="padding-left:10px" >四川金凌峰装饰工程有限公司</SPAN>
+	</DIV>
+</DIV>
+<DIV class=h15-top>
+<DIV>
+<DIV class=h15-sitebrand><SPAN class=h15-logo></SPAN>
+
+<div class="clear"> </div>
+					<div class="mainMenu"   style="z-index:999;float: left" >
+						<ul id="jsddm" style="float:left;">
+							<li >
+								<a href="/index.html"  >首页</a>
+							</li>
+							<li ><a href="/list/1.html">新闻中心</a>
+							</li>
+							<li><a href="/list/2.html">装修的金融</a>
+							</li>
+							<li><a href="/list/3.html">装修指南</a>
+							</li>
+							<li><a href="/list/4.html">成功案例</a>
+							</li>
+							<li ><a href="/list/5.html" style="width: 95px;">金凌峰团队介绍</a>
+							</li>
+
+                            <li><a href="/admin/index.html" target="_blank">我的家园</a>
+							</li>
+						</ul>
+				</div>
+				<div class="clear"> </div>
+
+</DIV>
+<DIV class=h15-groups id=Menu1>
+				
+    
+</DIV>

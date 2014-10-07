@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=zh dir=ltr xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>金凌峰装饰</TITLE>
+    <META http-equiv=X-UA-Compatible content=IE=EmulateIE7>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <LINK href="/misc/css/css.css" type=text/css rel=stylesheet>
+    <LINK href="/misc/css/css(1).css" type=text/css rel=stylesheet>
+    <LINK href="/misc/css/css(2).css" type=text/css rel=stylesheet>
+    <LINK href="/misc/css/css(3).css" type=text/css rel=stylesheet>
+    <script type="text/javascript" src="/misc/js/mainLoad.js">
+    </script>
+
+<BODY onload="load()">
+#parse("/foreground/header.vm")
+
+<DIV class=lowerContent>
+    <div id="content">
+        <div style="MARGIN-BOTTOM: 15px"><!-- flash  -->
+            <div class="m">
+                <OBJECT 	codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+                           classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 width=720 height=200><PARAM NAME="movie" VALUE="f/logo.swf">
+                    <PARAM NAME="quality" VALUE="high">
+                    <param name="wmode" value="transparent">
+                    <embed src="f/logo.swf" quality="high" wmode="transparent"	pluginspage="http://www.macromedia.com/go/getflashplayer"
+                           type="application/x-shockwave-flash" width="720" height="200"></embed>
+                </OBJECT>
+            </div>
+        </div>
+        <div id="c_header" style="background-image: url('/misc/images/c_header.gif'); background-repeat: no-repeat;width:715px; height:10px" ></div>
+        <div id="c_middle" style="background-image: url('/misc/images/c_middle1.gif'); background-y: no-repeat;width:715px; height:280px; background-repeat:repeat-y">
+            <table border="0" cellspacing="0" cellpadding="0" width="684">
+                <tr>
+                    <td id=1 width="347" class="c_contentfont" valign="top" height="140px">
+                        <div style="padding-left:10px">
+                            <table class="c_middletab_righth" width="331" height="30px" >
+                                <tr>
+                                    <td width="15px"><img src="/misc/images/table_header.gif"></td>
+                                    <td width="206px">
+                                        新闻中心
+                                    </td>
+                                    <td width="99px" align="center"><A href="/list/1.html"><img src="/misc/images/c_more.gif"></A></td></tr>
+                                <tr><td colspan="3"><img src="/misc/images/c_gray.gif" ></tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        <div id="newsCenter" style="line-height: 16pt;font:14px tahoma; ">
+                                            #foreach($article in $newsCenter)
+                                                <div  height=20>
+                                                    <div  style="float:right;padding-right:10px;" >
+                                                        $dateTool.format("yyyy-MM-dd", $article.createTime)
+                                                    </div>
+                                                    <div  style="display:inline;">
+                                                        <img src="/misc/images/c_round.gif">
+                                                    </div>
+                                                    <div  style="display:inline;padding-left:8px">
+                                                        <a href='/content/${article.id}.html'>$article.title</a>
+                                                    </div>
+                                                </div>
+                                            #end
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td id=2 valign="top" height="140px">
+                        <table class="c_middletab_righth" width="331" height="30px" >
+                            <tr>
+                                <td width="15px"><img src="/misc/images/table_header.gif"></td>
+                                <td width="206px">装修的金融</td>
+                                <td width="99px" align="center"><A href="/list/2.html"><img src="/misc/images/c_more.gif"></A></td></tr>
+                            <tr><td colspan="3"><img src="/misc/images/c_gray.gif" ></tr>
+
+                            <tr>
+                                <td colspan="3">
+                                    <div id="finance" style="line-height: 16pt;font:14px tahoma; ">
+                                        #foreach($article in $finance)
+                                            <div  height=20>
+                                                <div  style="float:right;padding-right:10px;" >
+                                                    $dateTool.format("yyyy-MM-dd", $article.createTime)
+                                                </div>
+                                                <div  style="display:inline;">
+                                                    <img src="/misc/images/c_round.gif">
+                                                </div>
+                                                <div  style="display:inline;padding-left:8px">
+                                                    <a href='/content/${article.id}.html'>$article.title</a>
+                                                </div>
+                                            </div>
+                                        #end
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </table>
+                    </td></tr>
+                <tr ><td id=3 width="347" class="c_contentfont" valign="top" height="140px">
+                    <table class="c_middletab_left" width="280" height="30px" >
+                        <tr>
+                            <td width="15px"><img src="/misc/images/table_header.gif"></td>
+                            <td width="228px">装修指南</td>
+                            <td width="79px" align="center"><A href="/list/3.html"><img src="/misc/images/c_more.gif"></A></td></tr>
+                        <tr><td colspan="3"><img src="/misc/images/c_gray.gif" ></tr>
+
+                        <tr>
+                            <td colspan="3">
+                                <div id="guide" style="line-height: 16pt;font:14px tahoma; ">
+                                    #foreach($article in $guide)
+                                        <div  height=20>
+                                            <div  style="float:right;padding-right:10px;" >
+                                                $dateTool.format("yyyy-MM-dd", $article.createTime)
+                                            </div>
+                                            <div  style="display:inline;">
+                                                <img src="/misc/images/c_round.gif">
+                                            </div>
+                                            <div  style="display:inline;padding-left:8px">
+                                                <a href='/content/${article.id}.html'>$article.title</a>
+                                            </div>
+                                        </div>
+                                    #end
+                                </div>
+                            </td>
+                        </tr>
+
+
+
+                    </table>
+                </td>
+                    <td id=4 valign="top" height="140px">
+                        <table class="c_middletab_righth" width="331" height="30px" >
+                            <tr>
+                                <td width="15px"><img src="/misc/images/table_header.gif"></td>
+                                <td width="206px">成功案例</td>
+                                <td width="99px" align="center"><A href="/list/4.html?id=402881e436e8a9020136e8aae93f0000"><img src="/misc/images/c_more.gif"></A></td></tr>
+                            <tr><td colspan="3"><img src="/misc/images/c_gray.gif" ></tr>
+
+                            <tr>
+                                <td colspan="3">
+                                    <div id="case" style="line-height: 16pt;font:14px tahoma; ">
+                                        #foreach($article in $case)
+                                            <div  height=20>
+                                                <div  style="float:right;padding-right:10px;" >
+                                                    $dateTool.format("yyyy-MM-dd", $article.createTime)
+                                                </div>
+                                                <div  style="display:inline;">
+                                                    <img src="/misc/images/c_round.gif">
+                                                </div>
+                                                <div  style="display:inline;padding-left:8px">
+                                                    <a href='/content/${article.id}.html'>$article.title</a>
+                                                </div>
+                                            </div>
+                                        #end
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </table>
+                    </td>
+
+                </tr></table>
+        </div>
+        <div id="c_bottom" style="background-image: url('/misc/images/c_bottom.gif'); background-repeat: no-repeat;width:715px; height:21px" ></div>
+    </div>
+    <div id="content2" >
+        <div id="c_header" style="background-image: url('/misc/images/c_header.gif'); background-repeat: no-repeat;width:715px; height:15px" ></div>
+        <div id="c_middle" style="background-image: url('/misc/images/c_middle1.gif'); background-y: no-repeat;width:715px; height:180px; background-repeat:repeat-y">
+            <table width="696" class="c_middletab2">
+                <tr><td width="19"><img src="/misc/images/table_header.gif"></td>
+                    <td width="416">联系方式</td>
+                </tr>
+                <tr><td colspan="3" style="background-image: url('/misc/images/c_gray.gif'); background-repeat: repeat-x"  height=6></td>
+                    <td rowspan="2" width="149" align="center"><img width="150px" height="150px" src="/misc/images/logo.jpg"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="letter-spacing: 2px; vertical-align:top;font-size:14px;">&nbsp;
+	<span >&nbsp;
+        <br>
+        <br>
+		<p>    &nbsp;&nbsp;四川金凌峰装饰工程有限公司</p>
+        <p>	   &nbsp;&nbsp;公司地址：成都市武侯区佳灵路5号红牌楼广场3号楼9楼14号</p>
+        <p>	   &nbsp;&nbsp;公司电话：028-85533147</p>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+	</span>
+                    </td></tr>
+            </table>
+            <p>&nbsp;</div>
+        <div id="c_bottom" style="background-image: url('/misc/images/c_bottom.gif'); background-repeat: no-repeat;width:715px; height:21px" ></div>
+    </div>
+</div>
+
+    #parse("/foreground/bottom.vm")
+
+</BODY></HTML>
