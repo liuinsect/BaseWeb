@@ -2,7 +2,7 @@
 <!-- saved from url=(0043)http://www.microsoft.com/zh/cn/default.aspx -->
 <HTML lang=zh dir=ltr xmlns="http://www.w3.org/1999/xhtml">
 <HEAD>
-    <TITLE>$module.name</TITLE>
+    <TITLE>金凌峰装饰--$module.name</TITLE>
     <META http-equiv=X-UA-Compatible content=IE=EmulateIE7>
     <META http-equiv=Content-Type content="text/html; charset=utf-8">
     <LINK href="/misc/css/css.css" type=text/css rel=stylesheet>
@@ -25,13 +25,9 @@
     <div style="MARGIN-BOTTOM: 15px" align=center  style="z-index:1">
 
         <div class="m">
-            <OBJECT 	codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
-                       classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 width=720 height=200><PARAM NAME="movie" VALUE="f/logo.swf">
-                <PARAM NAME="quality" VALUE="high">
-                <param name="wmode" value="transparent">
-                <embed src="f/logo.swf" quality="high" wmode="transparent"	pluginspage="http://www.macromedia.com/go/getflashplayer"
-                       type="application/x-shockwave-flash" width="720" height="200"></embed>
-            </OBJECT>
+            <div region='north'
+                 style="height: 200px; background: #EBF3FD; background-image: url('/misc/images/banner.jpg');">
+            </div>
         </div>
 
 

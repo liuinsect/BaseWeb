@@ -10,7 +10,7 @@
 	<body class="easyui-layout">
 		<!--body的north，显示logo -->
 		<div region='north'
-			style="height: 60px; background: #EBF3FD; background-image: url('/misc/images/header.jpg'); background-repeat: no-repeat; background-position: left;">
+			style="height: 60px; background: #EBF3FD; background-image: url('/misc/images/header.jpg'); background-repeat: repeat-x; width: 1920; background-repeat: no-repeat; background-position: left;">
 		</div>
 		<!-- 结束 -->
 
