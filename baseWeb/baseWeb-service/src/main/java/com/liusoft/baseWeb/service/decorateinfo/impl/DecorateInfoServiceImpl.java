@@ -1,8 +1,3 @@
-
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.service.decorateinfo.impl.DecorateInfoService.java
- */
 package com.liusoft.baseWeb.service.decorateinfo.impl;
 
 import javax.annotation.Resource;

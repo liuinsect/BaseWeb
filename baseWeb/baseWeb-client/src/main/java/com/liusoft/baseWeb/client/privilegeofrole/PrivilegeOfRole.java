@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.client.privilegeofrole.PrivilegeOfRole.java
- */
 package com.liusoft.baseWeb.client.privilegeofrole;
 
 import java.io.Serializable;

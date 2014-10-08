@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.service.module.ModuleService.java
- */
 package com.liusoft.baseWeb.service.module;
 
 import java.util.List;

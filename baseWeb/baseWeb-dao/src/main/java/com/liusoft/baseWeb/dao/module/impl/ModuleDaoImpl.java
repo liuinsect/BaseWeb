@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.dao.module..impl.ModuleDaoImpl.java
- */
 package com.liusoft.baseWeb.dao.module.impl;
 
 import java.util.List;

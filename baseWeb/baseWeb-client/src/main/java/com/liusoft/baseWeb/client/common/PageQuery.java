@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.liusoft.baseWeb.client.common;
 
 import com.liusoft.baseWeb.client.util.StringUtils;

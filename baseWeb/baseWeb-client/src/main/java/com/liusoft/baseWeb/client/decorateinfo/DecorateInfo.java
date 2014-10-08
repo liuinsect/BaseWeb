@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.client.decorateinfo.DecorateInfo.java
- */
 package com.liusoft.baseWeb.client.decorateinfo;
 
 import java.io.Serializable;

@@ -61,7 +61,6 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
-	<!--<bean id="springTransactionTemplate" class="com.jd.gemini.service.transaction.SpringTransactionTemplate"/>-->
 
 	<!-- 使用annotation定义数据库事务，这样可以在类或方法中直接使用@Transactional注解来声明事务 -->
 <!--	<tx:annotation-driven transaction-manager="transactionManager" />-->

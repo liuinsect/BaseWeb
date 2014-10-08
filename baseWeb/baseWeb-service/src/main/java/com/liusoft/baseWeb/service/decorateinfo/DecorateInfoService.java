@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.service.decorateinfo.DecorateInfoService.java
- */
 package com.liusoft.baseWeb.service.decorateinfo;
 
 import com.liusoft.baseWeb.client.common.PageQuery;

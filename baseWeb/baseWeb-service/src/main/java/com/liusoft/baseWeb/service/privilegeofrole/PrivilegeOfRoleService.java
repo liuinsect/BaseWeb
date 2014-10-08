@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.service.privilegeofrole.PrivilegeOfRoleService.java
- */
 package com.liusoft.baseWeb.service.privilegeofrole;
 
 import java.util.List;

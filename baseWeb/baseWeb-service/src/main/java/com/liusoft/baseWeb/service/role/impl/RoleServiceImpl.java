@@ -1,8 +1,3 @@
-
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.service.role.impl.RoleService.java
- */
 package com.liusoft.baseWeb.service.role.impl;
 
 import javax.annotation.Resource;

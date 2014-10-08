@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.client.user.User.java
- */
 package com.liusoft.baseWeb.client.user;
 
 import java.io.Serializable;

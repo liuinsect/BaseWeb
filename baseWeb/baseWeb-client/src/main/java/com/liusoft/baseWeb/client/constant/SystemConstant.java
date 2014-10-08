@@ -3,7 +3,6 @@ package com.liusoft.baseWeb.client.constant;
 /**
  * 系统常用常量
  * 
- * @Package com.jd.gemini.constant
  * @author liukunyang
  * @date 2013-10-11 下午06:22:35
  * @version V1.0

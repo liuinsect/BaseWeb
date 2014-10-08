@@ -5,7 +5,6 @@ package com.liusoft.baseWeb.client.constant;
  *
  * @author liukunyang
  * @version V1.0
- * @Package com.jd.gemini.constant
  * @date 2013-10-11 下午06:22:35
  */
 public class CacheKeyConstant {

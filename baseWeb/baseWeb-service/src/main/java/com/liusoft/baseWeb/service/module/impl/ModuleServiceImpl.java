@@ -1,8 +1,3 @@
-
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.service.module.impl.ModuleService.java
- */
 package com.liusoft.baseWeb.service.module.impl;
 
 import javax.annotation.Resource;

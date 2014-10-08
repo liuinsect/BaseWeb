@@ -1,8 +1,4 @@
 
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.service.privilegeofrole.impl.PrivilegeOfRoleService.java
- */
 package com.liusoft.baseWeb.service.privilegeofrole.impl;
 
 import javax.annotation.Resource;

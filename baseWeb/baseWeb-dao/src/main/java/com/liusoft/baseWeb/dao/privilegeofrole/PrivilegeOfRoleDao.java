@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.dao.privilegeofrole.PrivilegeOfRoleDao.java
- */
 package com.liusoft.baseWeb.dao.privilegeofrole;
 
 import java.util.List;

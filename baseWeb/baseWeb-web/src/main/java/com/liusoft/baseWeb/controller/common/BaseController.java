@@ -13,7 +13,6 @@ import java.util.Map;
 
 /**
  * gemini基础controller 
-* @Package com.jd.gemini.controller 
 * @author liukunyang
 * @date 2013-10-11 下午06:15:34 
 * @version V1.0

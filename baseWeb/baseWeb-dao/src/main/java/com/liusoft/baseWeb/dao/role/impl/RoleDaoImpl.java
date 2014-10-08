@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.dao.role..impl.RoleDaoImpl.java
- */
 package com.liusoft.baseWeb.dao.role.impl;
 
 import java.util.List;

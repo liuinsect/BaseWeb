@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.client.article.Article.java
- */
 package com.liusoft.baseWeb.client.article;
 
 import java.io.Serializable;

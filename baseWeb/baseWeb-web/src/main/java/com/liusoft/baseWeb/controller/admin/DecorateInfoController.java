@@ -1,7 +1,3 @@
-/**
- * Copyright(c) 2004-2014 www.jd.com
- * com.jd.baseWeb.web.controller.decorateinfo.DecorateInfoController.java
- */
 package com.liusoft.baseWeb.controller.admin;
 
 import javax.annotation.Resource;
