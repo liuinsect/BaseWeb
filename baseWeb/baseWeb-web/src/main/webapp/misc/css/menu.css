@@ -4,7 +4,7 @@
 }
 #jsddm li {
     float: left;
-    font: 12px Tahoma,Arial;
+    font: 15px '微软雅黑';
     list-style: none outside none;
 }
 #jsddm li a {

@@ -41,23 +41,19 @@ document.onclick = jsddm_close;
   </script>
 
 
-
-
-
-
-
-
-
-
-
-
 <BODY class=ltr>
 <DIV class=h15-bottom>
 <DIV class=h15-header>
-	<DIV class=h15-header-inner id=zh-cn-header>
-		<SPAN style="padding-left:10px" >四川金凌峰装饰工程有限公司</SPAN>
-	</DIV>
+    <div id="zh-cn-header" class="h15-header-inner">
+        <img width="100px" height="100px" src="/misc/images/logo1.png" style="padding-left:20px">
+        <div style="padding-left:10px;padding-top:30px;float:right; font: 24px '微软雅黑';">四川金凌峰装饰工程有限公司</div>
+        <br>
+        <div style="padding-left:30px;"> Golden Life</div>
+    </div>
 </DIV>
+
+
+
 <DIV class=h15-top>
 <DIV>
 <DIV class=h15-sitebrand><SPAN class=h15-logo></SPAN>
