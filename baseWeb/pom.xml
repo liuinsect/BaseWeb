@@ -22,7 +22,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- spring 3.0  mvc -->
+        <!-- spring 3.1.4  mvc -->
         <springmvc.version>3.1.4.RELEASE</springmvc.version>
 
         <!-- 单元测试需要 只在test -->
